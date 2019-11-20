@@ -173,7 +173,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -236,6 +236,7 @@ MonoBehaviour:
     type: 3}
   agentCount: 100
   flockDensity: 0.1
+  neighborRadius: 1
 --- !u!4 &1280817571
 Transform:
   m_ObjectHideFlags: 0

@@ -28,6 +28,7 @@ public class FlockAgent : MonoBehaviour
 
     public void Move(Vector2 velocity)
     {
+        transform.up = velocity;
         transform.position += new Vector3(velocity.x, velocity.y, 0f) * Time.deltaTime;
     }
 }
