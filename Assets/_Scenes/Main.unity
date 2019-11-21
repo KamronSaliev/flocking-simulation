@@ -235,7 +235,8 @@ MonoBehaviour:
   agentPrefab: {fileID: 4956842377586539026, guid: d1ab848b05f60c54a80bfc05836b72cd,
     type: 3}
   agentCount: 100
-  flockBehaviour: {fileID: 11400000, guid: 7539c44832d52704d9fa66353658d2bb, type: 2}
+  flockBehaviour: {fileID: 11400000, guid: 036fc96d5d4af0543a99226e2e43f885, type: 2}
+  flockMaxSpeed: 1
   flockDensity: 0.1
   neighborRadius: 1
 --- !u!4 &1280817571
