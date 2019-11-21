@@ -4,7 +4,6 @@
 public class FlockAgent : MonoBehaviour
 {
     private CircleCollider2D _agentCollider;
-
     public CircleCollider2D AgentCollider
     {
         get => _agentCollider;
