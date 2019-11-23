@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Centered Behavior
   m_EditorClassIdentifier: 
   center: {x: 0, y: 0}
-  radius: 15
+  radius: 20

@@ -6,6 +6,7 @@ public class Flock : MonoBehaviour
     public FlockAgent agentPrefab;
     public int agentCount = 100;
     public FlockBehaviour flockBehaviour;
+    public float flockSpeedMultiplier = 1;
     public float flockMaxSpeed = 1f;
     public float flockDensity = 0.1f;
     public float neighborRadius = 1f;
@@ -50,9 +51,8 @@ public class Flock : MonoBehaviour
             agent.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.white, Color.red, context.Count / 10f);
 
             Vector2 agentVelocity = flockBehaviour.CalculateMove(agent, context, this);
+            agentVelocity *= flockSpeedMultiplier;
             Vector2.ClampMagnitude(agentVelocity, flockMaxSpeed);
-            
-            Debug.Log(agentVelocity);
             
             agent.Move(agentVelocity);
         }

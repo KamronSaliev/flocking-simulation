@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b94598a59543940449a5039095f11c30, type: 3}
   m_Name: Smoothed Alignment Behavior
   m_EditorClassIdentifier: 
-  smoothTime: 0.1
+  smoothTime: 0

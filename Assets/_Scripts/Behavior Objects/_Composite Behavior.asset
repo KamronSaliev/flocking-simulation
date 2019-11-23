@@ -18,6 +18,6 @@ MonoBehaviour:
   - flockbehavior: {fileID: 11400000, guid: e89e389679cc4a944ba38d9425149120, type: 2}
     weight: 1
   - flockbehavior: {fileID: 11400000, guid: 127f9f3232699e243b65b62d2d00cac7, type: 2}
-    weight: 1
+    weight: 2
   - flockbehavior: {fileID: 11400000, guid: f2a6fdc1e9c138541b44bb1619bf28ca, type: 2}
-    weight: 0.2
+    weight: 0.1

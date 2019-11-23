@@ -4,7 +4,9 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Flock/Behavior/Centered Behavior")]
 public class CenteredBehavior : FlockBehaviour
 {
+    [HideInInspector]
     public Vector2 center = Vector2.zero;
+    
     public float radius = 10f;
     
     public override Vector2 CalculateMove(FlockAgent currentAgent, List<Transform> context, Flock flock)
