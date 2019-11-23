@@ -9,6 +9,13 @@ public class Flock : MonoBehaviour
     public float flockMaxSpeed = 1f;
     public float flockDensity = 0.1f;
     public float neighborRadius = 1f;
+    public float avoidanceRadiusMultiplier = 0.5f;
+
+    private float _avoidanceRadius;
+    public float AvoidanceRadius
+    {
+        get => _avoidanceRadius;
+    }
 
     private List<FlockAgent> _agents;
     private string _agentName = "FlockAgent";
@@ -16,6 +23,7 @@ public class Flock : MonoBehaviour
     void Start()
     {
         _agents = new List<FlockAgent>();
+        _avoidanceRadius = neighborRadius * avoidanceRadiusMultiplier;
         
         if (agentPrefab == null)
             return;
@@ -37,27 +45,32 @@ public class Flock : MonoBehaviour
     {
         foreach (FlockAgent agent in _agents)
         {
-            Collider2D[] neighborColliders = Physics2D.OverlapCircleAll(agent.transform.position, neighborRadius);
-            List<Transform>context = new List<Transform>();
-
-            for (int i = 0; i < neighborColliders.Length; i++)
-            {
-                if (agent.AgentCollider == neighborColliders[i])
-                    continue;
-                
-                context.Add(neighborColliders[i].transform);
-            }
+            List<Transform>context = GetNeighborObjects(agent);
             
-            agent.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.white, Color.black, neighborColliders.Length / 10f);
+            agent.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.white, Color.black, context.Count / 10f);
 
             Vector2 agentVelocity = flockBehaviour.CalculateMove(agent, context, this);
-
-            if (agentVelocity.magnitude > flockMaxSpeed)
-            {
-                agentVelocity = agentVelocity.normalized * flockMaxSpeed;
-            }
-
+            Vector2.ClampMagnitude(agentVelocity, flockMaxSpeed);
+            
+            Debug.Log(agentVelocity);
+            
             agent.Move(agentVelocity);
         }
+    }
+
+    private List<Transform> GetNeighborObjects(FlockAgent agent)
+    {
+        List<Transform>context = new List<Transform>();
+        Collider2D[] neighborColliders = Physics2D.OverlapCircleAll(agent.transform.position, neighborRadius);
+
+        for (int i = 0; i < neighborColliders.Length; i++)
+        {
+            if (agent.AgentCollider == neighborColliders[i])
+                continue;
+                
+            context.Add(neighborColliders[i].transform);
+        }
+
+        return context;
     }
 }

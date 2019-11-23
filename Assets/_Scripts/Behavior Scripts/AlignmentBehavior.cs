@@ -4,10 +4,12 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Flock/Behavior/Alignment")]
 public class AlignmentBehavior : FlockBehaviour
 {
-    private Vector2 _alignmentVector = Vector2.zero;
+    private Vector2 _alignmentVector;
     
     public override Vector2 CalculateMove(FlockAgent currentAgent, List<Transform> context, Flock flock)
     {
+        _alignmentVector = Vector2.zero;
+        
         if (context.Count == 0)
             return currentAgent.transform.up;
         

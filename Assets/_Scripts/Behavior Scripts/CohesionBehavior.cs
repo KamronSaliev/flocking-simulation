@@ -4,10 +4,12 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Flock/Behavior/Cohesion")]
 public class CohesionBehavior : FlockBehaviour
 {
-    private Vector2 _cohesionVector = Vector2.zero;
+    private Vector2 _cohesionVector;
     
     public override Vector2 CalculateMove(FlockAgent currentAgent, List<Transform> context, Flock flock)
     {
+        _cohesionVector = Vector2.zero;
+        
         if (context.Count == 0)
             return Vector2.zero;
         

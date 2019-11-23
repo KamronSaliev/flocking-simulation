@@ -173,7 +173,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 20
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -234,11 +234,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentPrefab: {fileID: 4956842377586539026, guid: d1ab848b05f60c54a80bfc05836b72cd,
     type: 3}
-  agentCount: 250
-  flockBehaviour: {fileID: 11400000, guid: 7539c44832d52704d9fa66353658d2bb, type: 2}
-  flockMaxSpeed: 5
-  flockDensity: 0.1
-  neighborRadius: 5
+  agentCount: 100
+  flockBehaviour: {fileID: 11400000, guid: 127f9f3232699e243b65b62d2d00cac7, type: 2}
+  flockMaxSpeed: 1
+  flockDensity: 0.08
+  neighborRadius: 2
   avoidanceRadiusMultiplier: 0.5
 --- !u!4 &1280817571
 Transform:
@@ -248,7 +248,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1280817569}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
