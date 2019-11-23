@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Flock/Behavior/Alignment")]
+[CreateAssetMenu(menuName = "Flock/Behavior/Alignment Behavior")]
 public class AlignmentBehavior : FlockBehaviour
 {
     private Vector2 _alignmentVector;

@@ -47,7 +47,7 @@ public class Flock : MonoBehaviour
         {
             List<Transform>context = GetNeighborObjects(agent);
             
-            agent.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.white, Color.black, context.Count / 10f);
+            agent.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.white, Color.red, context.Count / 10f);
 
             Vector2 agentVelocity = flockBehaviour.CalculateMove(agent, context, this);
             Vector2.ClampMagnitude(agentVelocity, flockMaxSpeed);

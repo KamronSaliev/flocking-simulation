@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   behaviors:
   - flockbehavior: {fileID: 11400000, guid: 7539c44832d52704d9fa66353658d2bb, type: 2}
-    weight: 1
+    weight: 4
   - flockbehavior: {fileID: 11400000, guid: 036fc96d5d4af0543a99226e2e43f885, type: 2}
     weight: 1
   - flockbehavior: {fileID: 11400000, guid: 127f9f3232699e243b65b62d2d00cac7, type: 2}
-    weight: 3
+    weight: 2
+  - flockbehavior: {fileID: 11400000, guid: f2a6fdc1e9c138541b44bb1619bf28ca, type: 2}
+    weight: 1

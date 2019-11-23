@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Flock/Behavior/Composite")]
+[CreateAssetMenu(menuName = "Flock/Behavior/Composite Behavior")]
 public class CompositeBehavior : FlockBehaviour
 {
     public CompositeBehaviorItem[] behaviors;
@@ -20,9 +20,7 @@ public class CompositeBehavior : FlockBehaviour
             Vector2 movementVector = behaviors[i].flockbehavior.CalculateMove(currentAgent, context, flock);
 
             if (movementVector.magnitude > behaviors[i].weight)
-            {
                 movementVector = movementVector.normalized * behaviors[i].weight;
-            }
 
             _compositeVelocityVector += movementVector;
         }

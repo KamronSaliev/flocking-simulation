@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9884c68ae9bdc8f49a92b229fd574fbf, type: 3}
-  m_Name: Cohesion Behavior
+  m_Script: {fileID: 11500000, guid: e6bdc8ed685ff4f448fe5113db1a6885, type: 3}
+  m_Name: Centered Behavior
   m_EditorClassIdentifier: 
-  smoothTime: 1
+  center: {x: 0, y: 0}
+  radius: 15

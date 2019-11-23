@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Flock/Behavior/Avoidance")]
+[CreateAssetMenu(menuName = "Flock/Behavior/Avoidance Behavior")]
 public class AvoidanceBehavior : FlockBehaviour
 {
     private Vector2 _avoidanceVector;
@@ -20,7 +20,7 @@ public class AvoidanceBehavior : FlockBehaviour
             if (Vector2.Distance(currentAgent.transform.position, context[i].position) < flock.AvoidanceRadius)
             {
                 _avoidObjectsCount++;
-                _avoidanceVector -= (Vector2)(context[i].position - currentAgent.transform.position);
+                _avoidanceVector += (Vector2)(currentAgent.transform.position - context[i].position);
             }
         }
 

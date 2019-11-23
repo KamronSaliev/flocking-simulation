@@ -156,7 +156,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0.66164064, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -234,11 +234,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentPrefab: {fileID: 4956842377586539026, guid: d1ab848b05f60c54a80bfc05836b72cd,
     type: 3}
-  agentCount: 100
+  agentCount: 200
   flockBehaviour: {fileID: 11400000, guid: ca68681f7d09d5243a3d6451ec8cf8f5, type: 2}
-  flockMaxSpeed: 1
-  flockDensity: 0.1
-  neighborRadius: 2
+  flockMaxSpeed: 2
+  flockDensity: 0.08
+  neighborRadius: 1.5
   avoidanceRadiusMultiplier: 0.5
 --- !u!4 &1280817571
 Transform:
