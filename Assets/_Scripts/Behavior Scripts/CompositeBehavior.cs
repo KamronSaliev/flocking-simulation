@@ -33,5 +33,5 @@ public class CompositeBehavior : FlockBehaviour
 public class CompositeBehaviorItem
 {
     public FlockBehaviour flockbehavior;
-    public int weight;
+    public float weight;
 }
