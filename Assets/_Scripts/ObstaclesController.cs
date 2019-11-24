@@ -21,7 +21,7 @@ public class ObstaclesController : MonoBehaviour
     /// <summary>
     /// The maximum size of an obstacle that it can reach
     /// </summary>
-    [Range(1.0f, 20.0f)]
+    [Range(1.0f, 50.0f)]
     [SerializeField] private float obstacleMaxScale = 10.0f;
     
     /// <summary>

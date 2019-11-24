@@ -253,7 +253,7 @@ MonoBehaviour:
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 256
-  obstacleMaxScale: 10
+  obstacleMaxScale: 15
 --- !u!61 &469055873
 BoxCollider2D:
   m_ObjectHideFlags: 0

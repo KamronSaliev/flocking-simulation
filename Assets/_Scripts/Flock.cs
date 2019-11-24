@@ -29,13 +29,7 @@ public class Flock : MonoBehaviour
     /// The speed multiplier of any agent
     /// </summary>
     [Range(1.0f, 10.0f)]
-    [SerializeField] private float agentSpeedMultiplier = 1;
-    
-    /// <summary>
-    /// The maximum speed that agent can reach
-    /// </summary>
-    [Range(1.0f, 10.0f)]
-    [SerializeField] private float agentMaxSpeed = 1f;
+    [SerializeField] private float agentSpeed = 1;
     
     /// <summary>
     /// The radius of any agent to detect neighbors
@@ -87,9 +81,7 @@ public class Flock : MonoBehaviour
             agent.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.white, Color.red, context.Count / 10f);
 
             Vector2 agentVelocity = flockBehaviour.CalculateMove(agent, context, this);
-            agentVelocity *= agentSpeedMultiplier;
-            
-            Vector2.ClampMagnitude(agentVelocity, agentMaxSpeed);
+            agentVelocity *= agentSpeed;
             
             agent.Move(agentVelocity);
         }
