@@ -3,6 +3,14 @@
 [RequireComponent(typeof(CircleCollider2D))]
 public class FlockAgent : MonoBehaviour
 {
+    /// <summary>
+    /// Flock that agent belongs to
+    /// </summary>
+    private Flock _flock;
+    
+    /// <summary>
+    /// Collider of the agent
+    /// </summary>
     private CircleCollider2D _agentCollider;
     public CircleCollider2D AgentCollider
     {
@@ -22,5 +30,14 @@ public class FlockAgent : MonoBehaviour
     {
         transform.up = velocity;
         transform.position += (Vector3)velocity * Time.deltaTime;
+    }
+
+    /// <summary>
+    /// Makes the flock agent related to its flock
+    /// </summary>
+    /// <param name="flock">The flock to relate to</param>
+    public void BelongsToFlock(Flock flock)
+    {
+        _flock = flock;
     }
 }

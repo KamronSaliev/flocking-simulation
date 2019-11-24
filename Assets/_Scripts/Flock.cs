@@ -67,7 +67,8 @@ public class Flock : MonoBehaviour
                 transform);
             
             newAgent.name = Constants.FlockAgentName + i;
-            
+            newAgent.BelongsToFlock(this);
+
             _agents.Add(newAgent);
         }
     }
@@ -78,8 +79,6 @@ public class Flock : MonoBehaviour
         {
             List<Transform>context = GetNeighborObjects(agent);
             
-            agent.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.white, Color.red, context.Count / 10f);
-
             Vector2 agentVelocity = flockBehaviour.CalculateMove(agent, context, this);
             agentVelocity *= agentSpeed;
             

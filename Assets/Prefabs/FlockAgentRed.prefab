@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8452308773158797622}
   - component: {fileID: 4956842377586539026}
   m_Layer: 0
-  m_Name: FlockAgent
+  m_Name: FlockAgentRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 8966945178157639174, guid: f512da9c6a43c4b448e1d94111c4d855,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
