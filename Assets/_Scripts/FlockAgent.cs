@@ -14,6 +14,10 @@ public class FlockAgent : MonoBehaviour
         _agentCollider = GetComponent<CircleCollider2D>();
     }
     
+    /// <summary>
+    /// Moves the agent towards the velocity vector
+    /// </summary>
+    /// <param name="velocity">The vector of direction</param>
     public void Move(Vector2 velocity)
     {
         transform.up = velocity;

@@ -4,6 +4,9 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Flock/Behavior/Alignment Behavior")]
 public class AlignmentBehavior : FlockBehaviour
 {
+    /// <summary>
+    /// The vector to align with vectors
+    /// </summary>
     private Vector2 _alignmentVector;
     
     public override Vector2 CalculateMove(FlockAgent currentAgent, List<Transform> context, Flock flock)

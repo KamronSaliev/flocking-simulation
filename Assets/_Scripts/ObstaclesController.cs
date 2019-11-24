@@ -5,35 +5,45 @@ public class ObstaclesController : MonoBehaviour
     /// <summary>
     /// The maximum number of the obstacles on the scene
     /// </summary>
+    [Range(1, 20)]
     [SerializeField] private int obstaclesMaxCount = 10;
+    
     /// <summary>
     /// The prefab of an obstacle to instantiate
     /// </summary>
     [SerializeField] private GameObject obstaclePrefab;
+    
     /// <summary>
     /// The layer of an obstacle
     /// </summary>
     [SerializeField] private LayerMask obstacleLayer;
+    
     /// <summary>
     /// The maximum size of an obstacle that it can reach
     /// </summary>
+    [Range(1.0f, 20.0f)]
     [SerializeField] private float obstacleMaxScale = 10.0f;
+    
     /// <summary>
     /// The vector of ray
     /// </summary>
     private Vector3 _rayEndPoint;
+    
     /// <summary>
     /// The object that is detected by ray
     /// </summary>
     private RaycastHit2D _raycastHit;
+    
     /// <summary>
     /// The gameObject of the selected obstacle
     /// </summary>
     private GameObject _currentGameObject;
+    
     /// <summary>
     /// The size of the selected obstacle
     /// </summary>
     private Vector3 _currentObstacleScale;
+    
     /// <summary>
     /// The obstacle counter
     /// </summary>

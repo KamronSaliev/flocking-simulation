@@ -4,6 +4,9 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Flock/Behavior/Cohesion Behavior")]
 public class CohesionBehavior : FlockBehaviour
 {
+    /// <summary>
+    /// The vector to stay near the detected neighbors
+    /// </summary>
     private Vector2 _cohesionVector;
     
     public override Vector2 CalculateMove(FlockAgent currentAgent, List<Transform> context, Flock flock)

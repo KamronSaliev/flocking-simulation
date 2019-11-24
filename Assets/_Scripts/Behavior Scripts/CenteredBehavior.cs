@@ -7,11 +7,14 @@ public class CenteredBehavior : FlockBehaviour
     [HideInInspector]
     public Vector2 center = Vector2.zero;
     
+    /// <summary>
+    /// The radius inside which the flock should stay
+    /// </summary>
     public float radius = 10f;
     
     public override Vector2 CalculateMove(FlockAgent currentAgent, List<Transform> context, Flock flock)
     {
-        Vector2 centerOffset = center - (Vector2)currentAgent.transform.position;
-        return (centerOffset.magnitude > radius ? centerOffset : Vector2.zero);
+        Vector2 centerTowardsVector = center - (Vector2)currentAgent.transform.position;
+        return (centerTowardsVector.magnitude > radius ? centerTowardsVector : Vector2.zero);
     }
 }
