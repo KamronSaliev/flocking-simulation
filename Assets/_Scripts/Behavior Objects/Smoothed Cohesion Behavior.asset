@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d275a14d4d2d09745a05ff4b9fa9cec5, type: 3}
   m_Name: Smoothed Cohesion Behavior
   m_EditorClassIdentifier: 
-  smoothTime: 0.5
+  filters:
+  - {fileID: 11400000, guid: 4c6c6086a14de02428d94fc12c671b2f, type: 2}
+  smoothTime: 0

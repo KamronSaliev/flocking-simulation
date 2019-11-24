@@ -11,7 +11,7 @@ public class Flock : MonoBehaviour
     /// <summary>
     /// The number of agents to instantiate
     /// </summary>
-    [Range(50, 300)]
+    [Range(1, 1000)]
     [SerializeField] private int agentCount = 100;
     
     /// <summary>
@@ -28,7 +28,7 @@ public class Flock : MonoBehaviour
     /// <summary>
     /// The speed multiplier of any agent
     /// </summary>
-    [Range(1.0f, 10.0f)]
+    [Range(1.0f, 100.0f)]
     [SerializeField] private float agentSpeed = 1;
     
     /// <summary>
@@ -80,8 +80,9 @@ public class Flock : MonoBehaviour
             List<Transform>context = GetNeighborObjects(agent);
             
             Vector2 agentVelocity = flockBehaviour.CalculateMove(agent, context, this);
-            agentVelocity *= agentSpeed;
             
+            agentVelocity = agentVelocity.normalized * agentSpeed;
+
             agent.Move(agentVelocity);
         }
     }

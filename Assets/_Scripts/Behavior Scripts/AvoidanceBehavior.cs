@@ -2,7 +2,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Flock/Behavior/Avoidance Behavior")]
-public class AvoidanceBehavior : FlockBehaviour
+public class AvoidanceBehavior : FilteredFlockBehavior
 {
     /// <summary>
     /// The vector to avoid neighbors
@@ -22,6 +22,12 @@ public class AvoidanceBehavior : FlockBehaviour
         if (context.Count == 0)
             return Vector2.zero;
             
+        for (int i = 0; i < filters.Length; i++)
+        {
+            if (filters[i] != null)
+                context = filters[i].GetFilteredContext(currentAgent, context);
+        }
+        
         for (int i = 0; i < context.Count; i++)
         {
             // if a neighbor is inside avoidance radius, then agent is to avoid the neighbor

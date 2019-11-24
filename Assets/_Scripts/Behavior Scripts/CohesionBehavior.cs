@@ -2,7 +2,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Flock/Behavior/Cohesion Behavior")]
-public class CohesionBehavior : FlockBehaviour
+public class CohesionBehavior : FilteredFlockBehavior
 {
     /// <summary>
     /// The vector to stay near the detected neighbors
@@ -15,6 +15,12 @@ public class CohesionBehavior : FlockBehaviour
         
         if (context.Count == 0)
             return Vector2.zero;
+        
+        for (int i = 0; i < filters.Length; i++)
+        {
+            if (filters[i] != null)
+                context = filters[i].GetFilteredContext(currentAgent, context);
+        }
         
         for (int i = 0; i < context.Count; i++)
             _cohesionVector += (Vector2)context[i].position;

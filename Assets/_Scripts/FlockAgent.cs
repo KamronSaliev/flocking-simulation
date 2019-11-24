@@ -7,15 +7,13 @@ public class FlockAgent : MonoBehaviour
     /// Flock that agent belongs to
     /// </summary>
     private Flock _flock;
-    
+    public Flock Flock { get => _flock; }
+
     /// <summary>
     /// Collider of the agent
     /// </summary>
     private CircleCollider2D _agentCollider;
-    public CircleCollider2D AgentCollider
-    {
-        get => _agentCollider;
-    }
+    public CircleCollider2D AgentCollider { get => _agentCollider; }
 
     void Start()
     {

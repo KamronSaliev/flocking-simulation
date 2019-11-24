@@ -2,7 +2,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Flock/Behavior/Alignment Behavior")]
-public class AlignmentBehavior : FlockBehaviour
+public class AlignmentBehavior : FilteredFlockBehavior
 {
     /// <summary>
     /// The vector to align with vectors
@@ -15,6 +15,12 @@ public class AlignmentBehavior : FlockBehaviour
         
         if (context.Count == 0)
             return currentAgent.transform.up;
+        
+        for (int i = 0; i < filters.Length; i++)
+        {
+            if (filters[i] != null)
+                context = filters[i].GetFilteredContext(currentAgent, context);
+        }
         
         for (int i = 0; i < context.Count; i++)
             _alignmentVector += (Vector2)context[i].up;

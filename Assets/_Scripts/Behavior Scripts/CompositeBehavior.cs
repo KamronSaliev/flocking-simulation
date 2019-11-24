@@ -35,8 +35,7 @@ public class CompositeBehavior : FlockBehaviour
             Vector2 movementVector = behaviors[i].flockBehavior.CalculateMove(currentAgent, context, flock);
             
             // every behavior vector is multiplied by the ratio of its weight to the sum all weights
-            movementVector = movementVector.normalized * (behaviors[i].weight / _weightsSum);
-
+            movementVector *= (behaviors[i].weight / _weightsSum);
             _compositeVelocityVector += movementVector;
         }
 
