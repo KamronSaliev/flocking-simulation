@@ -19,10 +19,16 @@ public class ObstaclesController : MonoBehaviour
     [SerializeField] private LayerMask obstacleLayer;
     
     /// <summary>
-    /// The maximum size of an obstacle that it can reach
+    /// The maximum scale of an obstacle that it can reach
     /// </summary>
     [Range(1.0f, 50.0f)]
-    [SerializeField] private float obstacleMaxScale = 10.0f;
+    [SerializeField] private float maxScale = 1.0f;
+    
+    /// <summary>
+    /// The scale change speed of an obstacle
+    /// </summary>
+    [Range(1.0f, 10.0f)]
+    [SerializeField] private float scaleChangeSpeed = 10.0f;
     
     /// <summary>
     /// The vector of ray
@@ -124,6 +130,6 @@ public class ObstaclesController : MonoBehaviour
     
     private void EnlargeSelectedObstacle(GameObject gameObject)
     {
-        gameObject.transform.localScale = Vector3.Lerp(_currentObstacleScale, Vector3.one * obstacleMaxScale, Time.deltaTime);
+        gameObject.transform.localScale = Vector3.Lerp(_currentObstacleScale, Vector3.one * maxScale, Time.deltaTime * scaleChangeSpeed);
     }
 }

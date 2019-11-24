@@ -21,3 +21,5 @@ MonoBehaviour:
     weight: 2
   - flockBehavior: {fileID: 11400000, guid: f2a6fdc1e9c138541b44bb1619bf28ca, type: 2}
     weight: 0.1
+  - flockBehavior: {fileID: 11400000, guid: 6e1d136f392f2d149b1883c5b1442c6d, type: 2}
+    weight: 10
