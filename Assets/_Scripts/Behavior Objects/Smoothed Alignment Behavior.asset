@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b94598a59543940449a5039095f11c30, type: 3}
   m_Name: Smoothed Alignment Behavior
   m_EditorClassIdentifier: 
-  filters:
-  - {fileID: 11400000, guid: 4c6c6086a14de02428d94fc12c671b2f, type: 2}
+  filters: []
   smoothTime: 0

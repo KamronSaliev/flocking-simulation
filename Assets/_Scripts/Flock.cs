@@ -6,7 +6,7 @@ public class Flock : MonoBehaviour
     /// <summary>
     /// The prefab of an flock agent to instantiate
     /// </summary>
-    [SerializeField] private FlockAgent agentPrefab;
+    [SerializeField] private FlockAgent[] agentTypes;
     
     /// <summary>
     /// The number of agents to instantiate
@@ -55,19 +55,20 @@ public class Flock : MonoBehaviour
     {
         _avoidanceRadius = neighborRadius * avoidanceRadiusMultiplier;
         
-        if (agentPrefab == null)
-            return;
+        
 
         for (int i = 0; i < agentCount; i++)
         {
+            int typeIndex = GetRandomAgentType();
+
             FlockAgent newAgent = Instantiate(
-                agentPrefab,
+                agentTypes[typeIndex],
                 flockDensity * agentCount * Random.insideUnitCircle,
                 Quaternion.Euler(Vector3.forward * Random.Range(0f, 360f)),
                 transform);
             
-            newAgent.name = Constants.FlockAgentName + i;
-            newAgent.BelongsToFlock(this);
+            newAgent.name = Constants.FlockAgentPrefix + Constants.FlockName + typeIndex + "_" + i;
+            newAgent.BelongsToFlock(typeIndex);
 
             _agents.Add(newAgent);
         }
@@ -77,7 +78,7 @@ public class Flock : MonoBehaviour
     {
         foreach (FlockAgent agent in _agents)
         {
-            List<Transform>context = GetNeighborObjects(agent);
+            List<Transform> context = GetNeighborObjects(agent);
             
             Vector2 agentVelocity = flockBehaviour.CalculateMove(agent, context, this);
             
@@ -85,6 +86,12 @@ public class Flock : MonoBehaviour
 
             agent.Move(agentVelocity);
         }
+    }
+
+    private int GetRandomAgentType()
+    {
+        int typeIndex = Random.Range(0, agentTypes.Length);
+        return typeIndex;
     }
     
     /// <summary>

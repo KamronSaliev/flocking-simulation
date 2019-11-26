@@ -1,11 +1,15 @@
 ﻿public static class Constants
 {
+    #region Tags
+    public static readonly string TagManager = "Manager";
+    #endregion
+    
     #region Flock
     public static readonly string FlockName = "Flock";
-    public static readonly string FlockAgentName = "FlockAgent";
+    public static readonly string FlockAgentPrefix = "Agent_";
     #endregion
 
     #region Obstacles
-    public static readonly string ObstacleName = "Obstacle";
+    public static readonly string ObstaclePrefix = "Obstacle_";
     #endregion
 }

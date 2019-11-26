@@ -8,7 +8,7 @@ public class LayerFilter : ContextFilter
     
     public override List<Transform> GetFilteredContext(FlockAgent agent, List<Transform> context)
     {
-        filteredContext = new List<Transform>();
+        List<Transform> filteredContext = new List<Transform>();
         
         for (int i = 0; i < context.Count; i++)
         {

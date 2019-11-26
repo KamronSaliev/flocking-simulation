@@ -21,7 +21,8 @@ public class AvoidanceBehavior : FilteredFlockBehavior
         
         if (context.Count == 0)
             return Vector2.zero;
-            
+        
+        // Filtering the context
         for (int i = 0; i < filters.Length; i++)
         {
             if (filters[i] != null)

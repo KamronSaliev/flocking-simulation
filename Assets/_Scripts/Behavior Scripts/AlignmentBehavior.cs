@@ -16,6 +16,7 @@ public class AlignmentBehavior : FilteredFlockBehavior
         if (context.Count == 0)
             return currentAgent.transform.up;
         
+        // Filtering the context
         for (int i = 0; i < filters.Length; i++)
         {
             if (filters[i] != null)

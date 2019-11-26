@@ -6,8 +6,8 @@ public class FlockAgent : MonoBehaviour
     /// <summary>
     /// Flock that agent belongs to
     /// </summary>
-    private Flock _flock;
-    public Flock Flock { get => _flock; }
+    private int _flockIndex;
+    public int FlockIndex { get => _flockIndex; }
 
     /// <summary>
     /// Collider of the agent
@@ -33,9 +33,9 @@ public class FlockAgent : MonoBehaviour
     /// <summary>
     /// Makes the flock agent related to its flock
     /// </summary>
-    /// <param name="flock">The flock to relate to</param>
-    public void BelongsToFlock(Flock flock)
+    /// <param name="flockIndex">The flock to relate to</param>
+    public void BelongsToFlock(int flockIndex)
     {
-        _flock = flock;
+        _flockIndex = flockIndex;
     }
 }

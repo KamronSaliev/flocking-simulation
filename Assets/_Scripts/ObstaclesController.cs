@@ -3,6 +3,11 @@
 public class ObstaclesController : MonoBehaviour
 {
     /// <summary>
+    /// The boolean chechbox to control generation of obstacles
+    /// </summary>
+    [SerializeField] private bool canGenerateObstacles = true;
+    
+    /// <summary>
     /// The maximum number of the obstacles on the scene
     /// </summary>
     [Range(1, 20)]
@@ -57,6 +62,8 @@ public class ObstaclesController : MonoBehaviour
     
     private void Update()
     {
+        if (!canGenerateObstacles) return;
+            
         HandleMousePressing();
         HandleMouseHolding();
         HandleMouseReleasing();
@@ -117,7 +124,7 @@ public class ObstaclesController : MonoBehaviour
 
         _currentGameObject = Instantiate(obstaclePrefab, position, Quaternion.identity);
         _currentGameObject.transform.SetParent(gameObject.transform);
-        _currentGameObject.name = Constants.ObstacleName + _obstaclesCount;
+        _currentGameObject.name = Constants.ObstaclePrefix + _obstaclesCount;
         
         _obstaclesCount++;
     }
