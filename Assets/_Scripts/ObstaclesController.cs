@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class ObstaclesController : MonoBehaviour
 {
@@ -34,7 +35,17 @@ public class ObstaclesController : MonoBehaviour
     /// </summary>
     [Range(1.0f, 10.0f)]
     [SerializeField] private float scaleChangeSpeed = 10.0f;
+
+    /// <summary>
+    /// Event to call on creation of the obstacle
+    /// </summary>
+    [SerializeField] private UnityEvent onCreate;
     
+    /// <summary>
+    /// SFX to play on destruction of the obstacle
+    /// </summary>
+    [SerializeField] private UnityEvent onDestroy;
+     
     /// <summary>
     /// The vector of ray
     /// </summary>
@@ -78,11 +89,17 @@ public class ObstaclesController : MonoBehaviour
         {
             _rayEndPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             _raycastHit = Physics2D.Raycast(_rayEndPoint, Vector2.zero, Mathf.Infinity, obstacleLayer);
-
+            
             if (_raycastHit.transform == null)
+            {
+                onCreate?.Invoke();
                 CreateObstacle(_rayEndPoint); // if a ray is casted and no obstacle is found, then a new obstacle is created
+            }
             else
+            {
+                onDestroy?.Invoke();
                 DestroySelectedObstacle(_raycastHit.transform.gameObject); // if a ray is casted on an obstacle, then the obstacle is destroyed
+            }
         }
     }
     

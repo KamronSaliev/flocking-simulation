@@ -4,7 +4,6 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Flock/Behavior/Centered Behavior")]
 public class CenteredBehavior : FlockBehavior
 {
-    [HideInInspector]
     public Vector2 center = Vector2.zero;
     
     /// <summary>

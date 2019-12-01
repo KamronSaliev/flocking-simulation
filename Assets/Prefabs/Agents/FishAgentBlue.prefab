@@ -173,6 +173,7 @@ GameObject:
   - component: {fileID: 5400978080711860557}
   - component: {fileID: 4956842377586539026}
   - component: {fileID: 1722756868595209687}
+  - component: {fileID: 3316609629531781163}
   m_Layer: 0
   m_Name: FishAgentBlue
   m_TagString: Untagged
@@ -263,6 +264,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!210 &3316609629531781163
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6555055878888598938}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 50
 --- !u!1 &6718044045204308724
 GameObject:
   m_ObjectHideFlags: 0
