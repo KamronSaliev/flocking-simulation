@@ -156,8 +156,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 450, y: -125}
-  m_SizeDelta: {x: 800, y: 150}
+  m_AnchoredPosition: {x: 350, y: -125}
+  m_SizeDelta: {x: 600, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &14887638
 MonoBehaviour:
@@ -294,11 +294,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentTypes:
   - {fileID: 4956842377586539026, guid: f4f4bcbd7865bf84d86dcbef4318b86c, type: 3}
-  - {fileID: 4956842377586539026, guid: d1ab848b05f60c54a80bfc05836b72cd, type: 3}
-  agentCount: 200
-  flockDensity: 0.1
+  - {fileID: 4956842377586539026, guid: 2496bafe8c70871459b79f51f2930dce, type: 3}
+  - {fileID: 4956842377586539026, guid: c0a0761c14c19a34f88dc908613d67db, type: 3}
+  agentCount: 150
+  flockDensity: 0.15
   flockBehaviour: {fileID: 0}
-  agentSpeed: 5
+  agentSpeed: 3
   neighborRadius: 3
   avoidanceRadiusMultiplier: 0.5
 --- !u!1 &463196075
@@ -641,7 +642,7 @@ MonoBehaviour:
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 256
-  maxScale: 20
+  maxScale: 25
   scaleChangeSpeed: 5
 --- !u!61 &1903688200
 BoxCollider2D:
