@@ -297,7 +297,7 @@ MonoBehaviour:
   - {fileID: 4956842377586539026, guid: d1ab848b05f60c54a80bfc05836b72cd, type: 3}
   agentCount: 400
   flockDensity: 0.05
-  flockBehaviour: {fileID: 11400000, guid: ca68681f7d09d5243a3d6451ec8cf8f5, type: 2}
+  flockBehaviour: {fileID: 0}
   agentSpeed: 5
   neighborRadius: 3
   avoidanceRadiusMultiplier: 0.5

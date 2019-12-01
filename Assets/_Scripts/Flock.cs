@@ -53,6 +53,8 @@ public class Flock : MonoBehaviour
 
     void Start()
     {
+        flockBehaviour = BehaviorManager.currentBehaviorType.BehaviorObject;
+        
         _avoidanceRadius = neighborRadius * avoidanceRadiusMultiplier;
 
         for (int i = 0; i < agentCount; i++)
@@ -74,6 +76,9 @@ public class Flock : MonoBehaviour
 
     private void Update()
     {
+        if (flockBehaviour == null)
+            return;            
+        
         foreach (FlockAgent agent in _agents)
         {
             List<Transform> context = GetNeighborObjects(agent);
