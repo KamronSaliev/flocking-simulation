@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f512da9c6a43c4b448e1d94111c4d855
+guid: 38e7514eeab92ba4c8846b81519fdd8d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8966945178157639174
-    second: fish
+      213: 649223268058989734
+    second: Button_0
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 512
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,22 +113,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fish
+      name: Button_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 19
-        width: 216
-        height: 217
+        x: 11
+        y: 11
+        width: 234
+        height: 234
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0, y: 0}
+      border: {x: 115, y: 115, z: 115, w: 115}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e10f090b557aa74a9b071f1c96998a0
-      internalID: 8966945178157639174
+      spriteID: 72fb783552afed84d91be73fdc5b0cb6
+      internalID: 649223268058989734
       vertices: []
       indices: 
       edges: []

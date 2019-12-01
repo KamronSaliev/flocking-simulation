@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(CircleCollider2D))]
+[RequireComponent(typeof(Collider2D))]
 public class FlockAgent : MonoBehaviour
 {
     /// <summary>
@@ -12,12 +12,12 @@ public class FlockAgent : MonoBehaviour
     /// <summary>
     /// Collider of the agent
     /// </summary>
-    private CircleCollider2D _agentCollider;
-    public CircleCollider2D AgentCollider { get => _agentCollider; }
+    private Collider2D _agentCollider;
+    public Collider2D AgentCollider { get => _agentCollider; }
 
     void Start()
     {
-        _agentCollider = GetComponent<CircleCollider2D>();
+        _agentCollider = GetComponent<Collider2D>();
     }
     
     /// <summary>
