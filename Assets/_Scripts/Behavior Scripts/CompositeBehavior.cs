@@ -2,7 +2,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Flock/Behavior/Composite Behavior")]
-public class CompositeBehavior : FlockBehaviour
+public class CompositeBehavior : FlockBehavior
 {
     /// <summary>
     /// Single core behaviors with their weights of impact on flock behavior
@@ -46,6 +46,6 @@ public class CompositeBehavior : FlockBehaviour
 [System.Serializable]
 public class CompositeBehaviorItem
 {
-    public FlockBehaviour flockBehavior;
+    public FlockBehavior flockBehavior;
     public float weight;
 }

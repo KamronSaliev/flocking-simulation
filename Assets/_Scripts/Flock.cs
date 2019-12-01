@@ -23,7 +23,7 @@ public class Flock : MonoBehaviour
     /// <summary>
     /// The behavior of the flock
     /// </summary>
-    [SerializeField] private FlockBehaviour flockBehaviour;
+    [SerializeField] private FlockBehavior flockBehaviour;
     
     /// <summary>
     /// The speed multiplier of any agent
@@ -54,8 +54,6 @@ public class Flock : MonoBehaviour
     void Start()
     {
         _avoidanceRadius = neighborRadius * avoidanceRadiusMultiplier;
-        
-        
 
         for (int i = 0; i < agentCount; i++)
         {

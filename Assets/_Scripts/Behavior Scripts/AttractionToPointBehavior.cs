@@ -2,7 +2,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Flock/Behavior/Attraction To Point Behavior")]
-public class AttractionToPointBehavior : FlockBehaviour
+public class AttractionToPointBehavior : FlockBehavior
 {
     /// <summary>
     /// The transforms of the points to which the agents are attracted

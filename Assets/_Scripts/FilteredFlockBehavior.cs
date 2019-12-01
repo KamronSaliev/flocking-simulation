@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class FilteredFlockBehavior : FlockBehaviour
+public abstract class FilteredFlockBehavior : FlockBehavior
 {
     /// <summary>
     /// The context filters

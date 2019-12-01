@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class FlockBehaviour : ScriptableObject
+public abstract class FlockBehavior : ScriptableObject
 {
     /// <summary>
     /// Calculates the vector of movement for current agent
