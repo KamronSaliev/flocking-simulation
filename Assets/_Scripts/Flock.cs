@@ -47,11 +47,11 @@ public class Flock : MonoBehaviour
     /// The avoidance radius
     /// </summary>
     private float _avoidanceRadius;
-    public float AvoidanceRadius { get => _avoidanceRadius; }
+    public float AvoidanceRadius => _avoidanceRadius;
 
     private List<FlockAgent> _agents = new List<FlockAgent>();
 
-    void Start()
+    private void Start()
     {
         flockBehaviour = BehaviorManager.currentBehaviorType.BehaviorObject;
         
@@ -60,14 +60,11 @@ public class Flock : MonoBehaviour
         for (int i = 0; i < agentCount; i++)
         {
             int typeIndex = GetRandomAgentType();
-
-            FlockAgent newAgent = Instantiate(
-                agentTypes[typeIndex],
-                flockDensity * agentCount * Random.insideUnitCircle,
-                Quaternion.Euler(Vector3.forward * Random.Range(0f, 360f)),
-                transform);
             
-            newAgent.name = Constants.FlockAgentPrefix + Constants.FlockName + typeIndex + "_" + i;
+            FlockAgent newAgent = CreateNewAgent(typeIndex);
+            
+            NameAgent(newAgent, typeIndex, i);
+            
             newAgent.BelongsToFlock(typeIndex);
 
             _agents.Add(newAgent);
@@ -115,5 +112,21 @@ public class Flock : MonoBehaviour
         }
 
         return context;
+    }
+
+    private FlockAgent CreateNewAgent(int type)
+    {
+        FlockAgent newAgent = Instantiate(
+            agentTypes[type],
+            flockDensity * agentCount * Random.insideUnitCircle,
+            Quaternion.Euler(Vector3.forward * Random.Range(0f, 360f)),
+            transform);
+
+        return newAgent;
+    }
+
+    private void NameAgent(FlockAgent agent, int type, int index)
+    {
+        agent.name = Constants.FlockAgentPrefix + Constants.FlockName + type + "_" + index;
     }
 }

@@ -14,6 +14,6 @@ public class CenteredBehavior : FlockBehavior
     public override Vector2 CalculateMove(FlockAgent currentAgent, List<Transform> context, Flock flock)
     {
         Vector2 centerTowardsVector = center - (Vector2)currentAgent.transform.position;
-        return (centerTowardsVector.magnitude > radius ? centerTowardsVector : Vector2.zero);
+        return centerTowardsVector.magnitude > radius ? centerTowardsVector : Vector2.zero;
     }
 }

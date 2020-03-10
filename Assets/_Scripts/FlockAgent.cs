@@ -15,7 +15,7 @@ public class FlockAgent : MonoBehaviour
     private Collider2D _agentCollider;
     public Collider2D AgentCollider { get => _agentCollider; }
 
-    void Start()
+    private void Start()
     {
         _agentCollider = GetComponent<Collider2D>();
     }
@@ -26,8 +26,8 @@ public class FlockAgent : MonoBehaviour
     /// <param name="velocity">The vector of direction</param>
     public void Move(Vector2 velocity)
     {
-        transform.up = velocity;
-        transform.position += (Vector3)velocity * Time.deltaTime;
+        RotateTowardsDirection(velocity);
+        MoveTowardsDirection(velocity);
     }
 
     /// <summary>
@@ -37,5 +37,15 @@ public class FlockAgent : MonoBehaviour
     public void BelongsToFlock(int flockIndex)
     {
         _flockIndex = flockIndex;
+    }
+
+    private void RotateTowardsDirection(Vector2 direction)
+    {
+        transform.up = direction;
+    }
+    
+    private void MoveTowardsDirection(Vector2 direction)
+    {
+        transform.position += (Vector3) direction * Time.deltaTime;
     }
 }
