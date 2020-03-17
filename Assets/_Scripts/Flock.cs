@@ -114,11 +114,6 @@ public class Flock : MonoBehaviour
         return context;
     }
 
-    /// <summary>
-    /// Creates agents of different flock types
-    /// </summary>
-    /// <param name="type"></param>
-    /// <returns></returns>
     private FlockAgent CreateNewAgent(int type)
     {
         FlockAgent newAgent = Instantiate(
@@ -130,12 +125,6 @@ public class Flock : MonoBehaviour
         return newAgent;
     }
 
-    /// <summary>
-    /// Names agent according to number, flock type
-    /// </summary>
-    /// <param name="agent"></param>
-    /// <param name="type"></param>
-    /// <param name="index"></param>
     private void NameAgent(FlockAgent agent, int type, int index)
     {
         agent.name = Constants.FlockAgentPrefix + Constants.FlockName + type + "_" + index;
