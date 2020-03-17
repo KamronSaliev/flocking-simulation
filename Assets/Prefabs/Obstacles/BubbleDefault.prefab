@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 4518048717667141720}
   - component: {fileID: 8609512070594850191}
   - component: {fileID: 8984025919307788620}
-  - component: {fileID: 8280776573012542479}
   - component: {fileID: 8703520885560867632}
+  - component: {fileID: 6356656482583205537}
   m_Layer: 8
-  m_Name: Bubble
+  m_Name: BubbleDefault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,20 +71,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8280776573012542479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 804853201744955375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4552d5e9eed100e419643542c7e4bded, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxScale: 1
-  scaleChangeSpeed: 10
 --- !u!114 &8703520885560867632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,6 +84,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _clip: {fileID: 8300000, guid: d8d7c61499536cb42a6f5302276f1445, type: 3}
+--- !u!114 &6356656482583205537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804853201744955375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eb2f3910e481494aa4e1db39a89bacd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxScale: 2
+  scaleChangeSpeed: 5
 --- !u!1 &2685093825464500969
 GameObject:
   m_ObjectHideFlags: 0

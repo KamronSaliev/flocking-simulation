@@ -83,7 +83,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxScale: 50
-  scaleChangeSpeed: 10
+  scaleChangeSpeed: 0.01
 --- !u!1 &2685093825464500969
 GameObject:
   m_ObjectHideFlags: 0
