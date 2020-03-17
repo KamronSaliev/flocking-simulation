@@ -698,31 +698,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canGenerateObstacles: 1
   obstaclesMaxCount: 10
-  obstaclePrefab: {fileID: 804853201744955375, guid: d4f5f4f0648540a45966a824b08293c1,
-    type: 3}
+  obstaclePrefabs:
+  - {fileID: 804853201744955375, guid: d4f5f4f0648540a45966a824b08293c1, type: 3}
+  - {fileID: 804853201744955375, guid: 760a095bd2f5bca479e81508fc18ba25, type: 3}
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 256
-  maxScale: 0.8
-  scaleChangeSpeed: 5
-  onCreate:
-    m_PersistentCalls:
-      m_Calls: []
-  onDestroy:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1418725657}
-        m_MethodName: PlaySound
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: d8d7c61499536cb42a6f5302276f1445,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!61 &1903688200
 BoxCollider2D:
   m_ObjectHideFlags: 0

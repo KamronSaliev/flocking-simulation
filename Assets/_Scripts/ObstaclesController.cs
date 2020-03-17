@@ -17,34 +17,12 @@ public class ObstaclesController : MonoBehaviour
     /// <summary>
     /// The prefab of an obstacle to instantiate
     /// </summary>
-    [SerializeField] private GameObject obstaclePrefab;
+    [SerializeField] private GameObject[] obstaclePrefabs;
     
     /// <summary>
     /// The layer of an obstacle
     /// </summary>
     [SerializeField] private LayerMask obstacleLayer;
-    
-    /// <summary>
-    /// The maximum scale of an obstacle that it can reach
-    /// </summary>
-    [Range(1.0f, 50.0f)]
-    [SerializeField] private float maxScale = 1.0f;
-    
-    /// <summary>
-    /// The scale change speed of an obstacle
-    /// </summary>
-    [Range(1.0f, 10.0f)]
-    [SerializeField] private float scaleChangeSpeed = 10.0f;
-
-    /// <summary>
-    /// Event to call on creation of the obstacle
-    /// </summary>
-    [SerializeField] private UnityEvent onCreate;
-    
-    /// <summary>
-    /// SFX to play on destruction of the obstacle
-    /// </summary>
-    [SerializeField] private UnityEvent onDestroy;
      
     /// <summary>
     /// The vector of ray
@@ -62,14 +40,12 @@ public class ObstaclesController : MonoBehaviour
     private GameObject _currentGameObject;
     
     /// <summary>
-    /// The size of the selected obstacle
-    /// </summary>
-    private Vector3 _currentObstacleScale;
-    
-    /// <summary>
     /// The obstacle counter
     /// </summary>
     private int _obstaclesCount;
+    
+    // Events and actions to call on create, focus, destroy
+    public static UnityAction<GameObject> OnFocusAction, OnDestroyAction;
     
     private void Update()
     {
@@ -89,16 +65,18 @@ public class ObstaclesController : MonoBehaviour
         {
             _rayEndPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             _raycastHit = Physics2D.Raycast(_rayEndPoint, Vector2.zero, Mathf.Infinity, obstacleLayer);
+
             
             if (_raycastHit.transform == null)
             {
-                onCreate?.Invoke();
                 CreateObstacle(_rayEndPoint); // if a ray is casted and no obstacle is found, then a new obstacle is created
             }
             else
             {
-                onDestroy?.Invoke();
-                DestroySelectedObstacle(_raycastHit.transform.gameObject); // if a ray is casted on an obstacle, then the obstacle is destroyed
+                _currentGameObject = _raycastHit.transform.gameObject;
+                
+                OnDestroyAction?.Invoke(_currentGameObject);
+                _obstaclesCount--;
             }
         }
     }
@@ -117,10 +95,8 @@ public class ObstaclesController : MonoBehaviour
                 return;
             
             _currentGameObject = _raycastHit.transform.gameObject;
-            _currentObstacleScale = _currentGameObject.transform.localScale;
             
-            // while the user holds the button, a selected obstacle is enlarged
-            EnlargeSelectedObstacle(_currentGameObject);
+            OnFocusAction?.Invoke(_currentGameObject);
         }
     }
     
@@ -139,21 +115,16 @@ public class ObstaclesController : MonoBehaviour
     {
         if (_obstaclesCount > obstaclesMaxCount) return;
 
-        _currentGameObject = Instantiate(obstaclePrefab, position, Quaternion.identity);
+        int randomIndex = Random.Range(0, obstaclePrefabs.Length);
+        
+        _currentGameObject = Instantiate(
+            obstaclePrefabs[randomIndex], 
+            position, 
+            Quaternion.identity);
+        
         _currentGameObject.transform.SetParent(gameObject.transform);
         _currentGameObject.name = Constants.ObstaclePrefix + _obstaclesCount;
         
         _obstaclesCount++;
-    }
-
-    private void DestroySelectedObstacle(GameObject gameObject)
-    {
-        Destroy(gameObject);
-        _obstaclesCount--;
-    }
-    
-    private void EnlargeSelectedObstacle(GameObject gameObject)
-    {
-        gameObject.transform.localScale = Vector3.Lerp(_currentObstacleScale, Vector3.one * maxScale, Time.deltaTime * scaleChangeSpeed);
     }
 }
