@@ -700,7 +700,6 @@ MonoBehaviour:
   obstaclesMaxCount: 10
   obstaclePrefabs:
   - {fileID: 804853201744955375, guid: d4f5f4f0648540a45966a824b08293c1, type: 3}
-  - {fileID: 804853201744955375, guid: 760a095bd2f5bca479e81508fc18ba25, type: 3}
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 256
