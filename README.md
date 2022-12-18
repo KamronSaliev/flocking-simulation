@@ -1,7 +1,5 @@
 `PROJECT NAME:` Flocking Simulation
 
-`PROJECT BY:` Soliev Komroniddin
-
 <p align="center"><img src="./Preview/1.png" width='512px'></p>
 
 <p align="center"><img src="./Preview/2.png" width='512px'></p>
