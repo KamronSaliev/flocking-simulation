@@ -2,69 +2,48 @@
 using UnityEngine;
 
 public class Flock : MonoBehaviour
-{ 
-    /// <summary>
-    /// The prefab of an flock agent to instantiate
-    /// </summary>
+{
     [SerializeField] private FlockAgent[] agentTypes;
-    
-    /// <summary>
-    /// The number of agents to instantiate
-    /// </summary>
-    [Range(1, 1000)]
-    [SerializeField] private int agentCount = 100;
-    
-    /// <summary>
-    /// The flock density before instantiation of the agents
-    /// </summary>
-    [Range(0.0f, 1f)]
-    [SerializeField] private float flockDensity = 0.1f;
-    
-    /// <summary>
-    /// The behavior of the flock
-    /// </summary>
-    [SerializeField] private FlockBehavior flockBehaviour;
-    
-    /// <summary>
-    /// The speed multiplier of any agent
-    /// </summary>
-    [Range(1.0f, 100.0f)]
-    [SerializeField] private float agentSpeed = 1;
-    
-    /// <summary>
-    /// The radius of any agent to detect neighbors
-    /// </summary>
-    [Range(1.0f, 10.0f)]
-    [SerializeField] private float neighborRadius = 1f;
-    
-    /// <summary>
-    /// The neighbor radius factor of any agent to avoid detected neighbors
-    /// </summary>
-    [Range(0.0f, 1.0f)]
-    [SerializeField] private float avoidanceRadiusMultiplier = 0.5f;
-    
-    /// <summary>
-    /// The avoidance radius
-    /// </summary>
-    private float _avoidanceRadius;
-    public float AvoidanceRadius => _avoidanceRadius;
 
-    private List<FlockAgent> _agents = new List<FlockAgent>();
+    [Range(1, 1000)] [SerializeField] private int agentCount = 100;
+
+    [Range(0.0f, 1f)] [SerializeField] private float flockDensity = 0.1f;
+
+    [SerializeField] private FlockBehavior flockBehaviour;
+
+    [Range(1.0f, 100.0f)] [SerializeField] private float agentSpeed = 1;
+
+    /// <summary>
+    ///     The radius of any agent to detect neighbors
+    /// </summary>
+    [Range(1.0f, 10.0f)] [SerializeField] private float neighborRadius = 1f;
+
+    /// <summary>
+    ///     The neighbor radius factor of any agent to avoid detected neighbors
+    /// </summary>
+    [Range(0.0f, 1.0f)] [SerializeField] private float avoidanceRadiusMultiplier = 0.5f;
+
+    /// <summary>
+    ///     The avoidance radius
+    /// </summary>
+    public float AvoidanceRadius { get; private set; }
+
+    private readonly List<FlockAgent> _agents = new List<FlockAgent>();
 
     private void Start()
     {
         flockBehaviour = BehaviorManager.currentBehaviorType.BehaviorObject;
-        
-        _avoidanceRadius = neighborRadius * avoidanceRadiusMultiplier;
 
-        for (int i = 0; i < agentCount; i++)
+        AvoidanceRadius = neighborRadius * avoidanceRadiusMultiplier;
+
+        for (var i = 0; i < agentCount; i++)
         {
-            int typeIndex = GetRandomAgentType();
-            
-            FlockAgent newAgent = CreateNewAgent(typeIndex);
-            
+            var typeIndex = GetRandomAgentType();
+
+            var newAgent = CreateNewAgent(typeIndex);
+
             NameAgent(newAgent, typeIndex, i);
-            
+
             newAgent.BelongsToFlock(typeIndex);
 
             _agents.Add(newAgent);
@@ -74,14 +53,15 @@ public class Flock : MonoBehaviour
     private void Update()
     {
         if (flockBehaviour == null)
-            return;            
-        
-        foreach (FlockAgent agent in _agents)
         {
-            List<Transform> context = GetNeighborObjects(agent);
-            
-            Vector2 agentVelocity = flockBehaviour.CalculateMove(agent, context, this);
-            
+            return;
+        }
+
+        foreach (var agent in _agents)
+        {
+            var context = GetNeighborObjects(agent);
+
+            var agentVelocity = flockBehaviour.CalculateMove(agent, context, this);
             agentVelocity = agentVelocity.normalized * agentSpeed;
 
             agent.Move(agentVelocity);
@@ -90,24 +70,26 @@ public class Flock : MonoBehaviour
 
     private int GetRandomAgentType()
     {
-        int typeIndex = Random.Range(0, agentTypes.Length);
+        var typeIndex = Random.Range(0, agentTypes.Length);
         return typeIndex;
     }
-    
+
     /// <summary>
-    /// Detects all neighbors of the selected agent
+    ///     Detects all neighbors of the selected agent
     /// </summary>
     /// <param name="agent">The selected agent</param>
     private List<Transform> GetNeighborObjects(FlockAgent agent)
     {
-        List<Transform>context = new List<Transform>();
-        Collider2D[] neighborColliders = Physics2D.OverlapCircleAll(agent.transform.position, neighborRadius);
+        var context = new List<Transform>();
+        var neighborColliders = Physics2D.OverlapCircleAll(agent.transform.position, neighborRadius);
 
-        for (int i = 0; i < neighborColliders.Length; i++)
+        for (var i = 0; i < neighborColliders.Length; i++)
         {
             if (agent.AgentCollider == neighborColliders[i])
+            {
                 continue;
-                
+            }
+
             context.Add(neighborColliders[i].transform);
         }
 
@@ -116,7 +98,7 @@ public class Flock : MonoBehaviour
 
     private FlockAgent CreateNewAgent(int type)
     {
-        FlockAgent newAgent = Instantiate(
+        var newAgent = Instantiate(
             agentTypes[type],
             flockDensity * agentCount * Random.insideUnitCircle,
             Quaternion.Euler(Vector3.forward * Random.Range(0f, 360f)),

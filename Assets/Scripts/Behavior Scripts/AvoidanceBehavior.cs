@@ -5,31 +5,35 @@ using UnityEngine;
 public class AvoidanceBehavior : FilteredFlockBehavior
 {
     /// <summary>
-    /// The vector to avoid neighbors
+    ///     The vector to avoid neighbors
     /// </summary>
     private Vector2 _avoidanceVector;
-    
+
     /// <summary>
-    /// The number of neighbors to avoid
+    ///     The number of neighbors to avoid
     /// </summary>
     private int _avoidObjectsCount;
-    
+
     public override Vector2 CalculateMove(FlockAgent currentAgent, List<Transform> context, Flock flock)
     {
         _avoidanceVector = Vector2.zero;
         _avoidObjectsCount = 0;
-        
+
         if (context.Count == 0)
+        {
             return Vector2.zero;
-        
+        }
+
         // Filtering the context
-        for (int i = 0; i < filters.Length; i++)
+        for (var i = 0; i < filters.Length; i++)
         {
             if (filters[i] != null)
+            {
                 context = filters[i].GetFilteredContext(currentAgent, context);
+            }
         }
-        
-        for (int i = 0; i < context.Count; i++)
+
+        for (var i = 0; i < context.Count; i++)
         {
             // if a neighbor is inside avoidance radius, then agent is to avoid the neighbor
             if (Vector2.Distance(currentAgent.transform.position, context[i].position) < flock.AvoidanceRadius)
@@ -39,8 +43,10 @@ public class AvoidanceBehavior : FilteredFlockBehavior
             }
         }
 
-        if (_avoidObjectsCount > 0) 
+        if (_avoidObjectsCount > 0)
+        {
             _avoidanceVector /= _avoidObjectsCount;
+        }
 
         return _avoidanceVector;
     }

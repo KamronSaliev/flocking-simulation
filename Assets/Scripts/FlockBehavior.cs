@@ -4,7 +4,7 @@ using UnityEngine;
 public abstract class FlockBehavior : ScriptableObject
 {
     /// <summary>
-    /// Calculates the vector of movement for current agent
+    ///     Calculates the vector of movement for current agent
     /// </summary>
     /// <param name="currentAgent">The current flock agent</param>
     /// <param name="context">The list of transforms of neighbors</param>

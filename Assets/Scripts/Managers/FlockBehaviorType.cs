@@ -1,17 +1,18 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
-[System.Serializable]
+[Serializable]
 public class FlockBehaviorType
 {
     [SerializeField] private EBehaviorType behaviorType = EBehaviorType.Undefined;
     [SerializeField] private FlockBehavior behaviorObject;
-    
+
     public EBehaviorType BehaviorType
     {
         get => behaviorType;
         set => behaviorType = value;
     }
-    
+
     public FlockBehavior BehaviorObject
     {
         get => behaviorObject;

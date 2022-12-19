@@ -5,26 +5,32 @@ using UnityEngine;
 public class AlignmentBehavior : FilteredFlockBehavior
 {
     /// <summary>
-    /// The vector to align with vectors
+    ///     The vector to align with vectors
     /// </summary>
     private Vector2 _alignmentVector;
-    
+
     public override Vector2 CalculateMove(FlockAgent currentAgent, List<Transform> context, Flock flock)
     {
         _alignmentVector = Vector2.zero;
-        
+
         if (context.Count == 0)
+        {
             return currentAgent.transform.up;
-        
+        }
+
         // Filtering the context
-        for (int i = 0; i < filters.Length; i++)
+        for (var i = 0; i < filters.Length; i++)
         {
             if (filters[i] != null)
+            {
                 context = filters[i].GetFilteredContext(currentAgent, context);
+            }
         }
-        
-        for (int i = 0; i < context.Count; i++)
+
+        for (var i = 0; i < context.Count; i++)
+        {
             _alignmentVector += (Vector2)context[i].up;
+        }
 
         _alignmentVector /= context.Count;
 

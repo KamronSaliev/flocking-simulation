@@ -11,15 +11,18 @@ public class BehaviorManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        
+
         currentBehaviorType = new FlockBehaviorType();
     }
-    
+
     public void SelectBehaviorType(int behaviorIndex)
     {
-        if (flockBehaviorTypes[behaviorIndex].BehaviorObject == null || flockBehaviorTypes[behaviorIndex].BehaviorType == EBehaviorType.Undefined)
+        if (flockBehaviorTypes[behaviorIndex].BehaviorObject == null ||
+            flockBehaviorTypes[behaviorIndex].BehaviorType == EBehaviorType.Undefined)
+        {
             return;
-        
+        }
+
         currentBehaviorType.BehaviorType = flockBehaviorTypes[behaviorIndex].BehaviorType;
         currentBehaviorType.BehaviorObject = flockBehaviorTypes[behaviorIndex].BehaviorObject;
     }

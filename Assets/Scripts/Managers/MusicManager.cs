@@ -6,7 +6,7 @@ public class MusicManager : MonoBehaviour
     public static MusicManager instance;
 
     public AudioClip audioClip;
-    
+
     private AudioSource _audioSource;
 
     private void Awake()
