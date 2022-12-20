@@ -11,7 +11,7 @@
         #region Flock
 
         public static readonly string FlockName = "Flock";
-        public static readonly string FlockAgentPrefix = "Agent_";
+        public static readonly string FlockAgentPrefix = "Agent";
 
         #endregion
     }
