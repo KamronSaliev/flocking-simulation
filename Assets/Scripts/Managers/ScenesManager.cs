@@ -8,9 +8,9 @@ public class ScenesManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        Application.targetFrameRate = 60;    
+        Application.targetFrameRate = 60;
     }
-    
+
     public void SwitchScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);

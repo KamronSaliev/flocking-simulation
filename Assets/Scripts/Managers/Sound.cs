@@ -6,7 +6,9 @@ public class Sound : MonoBehaviour
 
     public void PlaySound()
     {
-        if (_clip != null && SoundsManager.instance != null) 
+        if (_clip != null && SoundsManager.instance != null)
+        {
             SoundsManager.instance.PlaySound(_clip);
+        }
     }
 }
