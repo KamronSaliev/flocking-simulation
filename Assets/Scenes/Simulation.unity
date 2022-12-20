@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentReference:
-    TypeName: Core.ServicesLifetimeScope
+    TypeName: LifetimeScopes.ServicesLifetimeScope
   autoRun: 0
   autoInjectGameObjects: []
   _flockSettingsConfig: {fileID: 11400000, guid: b268d64782e504aa6a32b80717361ca7,

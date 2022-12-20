@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentReference:
-    TypeName: Core.ServicesLifetimeScope
+    TypeName: LifetimeScopes.ServicesLifetimeScope
   autoRun: 0
   autoInjectGameObjects: []
   _menuView: {fileID: 1657488291}
