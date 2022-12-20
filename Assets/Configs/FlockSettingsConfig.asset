@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5be68bc96c1f4d9ab65fbe0c1d65ef74, type: 3}
-  m_Name: Flock Settings Config
+  m_Name: FlockSettingsConfig
   m_EditorClassIdentifier: 
   _agentTypes:
   - {fileID: 4956842377586539026, guid: f4f4bcbd7865bf84d86dcbef4318b86c, type: 3}

@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 013ccfb87cc346b19ffcb150465785b0, type: 3}
-  m_Name: Scenes Config
+  m_Script: {fileID: 11500000, guid: 1640d782a8a49e34292e870b300ba1b4, type: 3}
+  m_Name: CompositeBehavior
   m_EditorClassIdentifier: 
-  _menuSceneIndex: 2
-  _simulationSceneIndex: 3
+  _behaviors: []

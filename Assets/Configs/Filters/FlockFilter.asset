@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6bdc8ed685ff4f448fe5113db1a6885, type: 3}
-  m_Name: Centered Behavior
+  m_Script: {fileID: 11500000, guid: 5384e897e6dd2d24c8e5e34d2cfe0626, type: 3}
+  m_Name: FlockFilter
   m_EditorClassIdentifier: 
-  center: {x: 0, y: 0}
-  radius: 20
+  _filteredContext: []

@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53b57f883ac1e4f4998bdc801c56768e, type: 3}
-  m_Name: Attraction To Point Behavior
+  m_Script: {fileID: 11500000, guid: d275a14d4d2d09745a05ff4b9fa9cec5, type: 3}
+  m_Name: SmoothedCohesionBehavior
   m_EditorClassIdentifier: 
-  _points:
-  - {x: 0, y: -10}
-  - {x: 0, y: 10}
-  - {x: -13, y: 0}
-  - {x: 13, y: 0}
+  filters: []
+  smoothTime: 0.5

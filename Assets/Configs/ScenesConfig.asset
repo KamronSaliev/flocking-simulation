@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b94598a59543940449a5039095f11c30, type: 3}
-  m_Name: Smoothed Alignment Behavior
+  m_Script: {fileID: 11500000, guid: 013ccfb87cc346b19ffcb150465785b0, type: 3}
+  m_Name: ScenesConfig
   m_EditorClassIdentifier: 
-  filters: []
-  smoothTime: 0
+  _menuSceneIndex: 2
+  _simulationSceneIndex: 3

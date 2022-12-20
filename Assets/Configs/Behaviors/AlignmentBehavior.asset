@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8635a6fda60fc6469cde937190f6425, type: 3}
-  m_Name: Layer Filter
+  m_Script: {fileID: 11500000, guid: 8c6d7342408046b4bbec17f2d72c1c36, type: 3}
+  m_Name: AlignmentBehavior
   m_EditorClassIdentifier: 
-  filteredContext: []
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 256
+  _filters:
+  - {fileID: 11400000, guid: 4c6c6086a14de02428d94fc12c671b2f, type: 2}

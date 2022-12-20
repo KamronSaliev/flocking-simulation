@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9884c68ae9bdc8f49a92b229fd574fbf, type: 3}
-  m_Name: Cohesion Behavior
+  m_Script: {fileID: 11500000, guid: b94598a59543940449a5039095f11c30, type: 3}
+  m_Name: SmoothedAlignmentBehavior
   m_EditorClassIdentifier: 
   filters: []
+  smoothTime: 0

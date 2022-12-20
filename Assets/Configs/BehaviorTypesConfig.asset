@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1b5a9ea4e2844ba8fa43177b71ef4af, type: 3}
-  m_Name: Behavior Types Config
+  m_Name: BehaviorTypesConfig
   m_EditorClassIdentifier: 
   _behaviors:
-  - _behaviorType: 1
+  - _behaviorType: 0
     _behaviorConfig: {fileID: 11400000, guid: 036fc96d5d4af0543a99226e2e43f885, type: 2}
-  - _behaviorType: 2
+  - _behaviorType: 1
     _behaviorConfig: {fileID: 11400000, guid: 127f9f3232699e243b65b62d2d00cac7, type: 2}
-  - _behaviorType: 3
+  - _behaviorType: 2
     _behaviorConfig: {fileID: 11400000, guid: dec8308a6344d2246ab4cf7ab24ab34e, type: 2}
-  - _behaviorType: 4
+  - _behaviorType: 3
     _behaviorConfig: {fileID: 11400000, guid: 7539c44832d52704d9fa66353658d2bb, type: 2}
-  - _behaviorType: 5
+  - _behaviorType: 4
     _behaviorConfig: {fileID: 11400000, guid: ca68681f7d09d5243a3d6451ec8cf8f5, type: 2}
