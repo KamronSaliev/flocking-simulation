@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using Configs;
 using UnityEngine;
+using VContainer;
+using VContainer.Unity;
 using Views;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
@@ -10,27 +12,27 @@ namespace Factories
 {
     public class FlockFactory : IDisposable
     {
-        public List<FlockAgentView> Agents => _agents;
+        public List<FlockAgentView> Agents { get; } = new List<FlockAgentView>();
 
         private readonly FlockSettingsConfig _flockSettingsConfig;
+        private readonly IObjectResolver _resolver;
         private readonly Transform _rootTransform;
 
-        private readonly List<FlockAgentView> _agents = new List<FlockAgentView>();
-
-        public FlockFactory(FlockSettingsConfig flockSettingsConfig, Transform rootTransform)
+        public FlockFactory(FlockSettingsConfig flockSettingsConfig, IObjectResolver resolver, Transform rootTransform)
         {
             _flockSettingsConfig = flockSettingsConfig;
+            _resolver = resolver;
             _rootTransform = rootTransform;
         }
 
         public void CreateAgents()
         {
-            for (int i = 0; i < _flockSettingsConfig.AgentCount; i++)
+            for (var i = 0; i < _flockSettingsConfig.AgentCount; i++)
             {
                 CreateAgent();
             }
         }
-        
+
         public FlockAgentView CreateAgent()
         {
             return CreateAgent(GetRandomAgentType());
@@ -38,15 +40,15 @@ namespace Factories
 
         public FlockAgentView CreateAgent(int type)
         {
-            var newAgent = Object.Instantiate(
+            var newAgent = _resolver.Instantiate(
                 _flockSettingsConfig.AgentTypes[type],
                 _flockSettingsConfig.FlockDensity * _flockSettingsConfig.AgentCount * Random.insideUnitCircle,
                 Quaternion.Euler(Vector3.forward * Random.Range(0.0f, 360.0f)),
                 _rootTransform);
 
-            _agents.Add(newAgent);
+            Agents.Add(newAgent);
 
-            var index = _agents.Count;
+            var index = Agents.Count;
             newAgent.UpdateName(type, index);
             newAgent.BelongsToFlock(type);
 
@@ -60,12 +62,12 @@ namespace Factories
 
         public void Dispose()
         {
-            for (var i = 0; i < _agents.Count; i++)
+            for (var i = 0; i < Agents.Count; i++)
             {
-                Object.Destroy(_agents[i]);
+                Object.Destroy(Agents[i]);
             }
 
-            _agents.Clear();
+            Agents.Clear();
         }
     }
 }

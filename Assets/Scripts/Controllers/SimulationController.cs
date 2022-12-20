@@ -1,12 +1,11 @@
 using Configs;
 using Core;
 using Factories;
-using UnityEngine;
 using VContainer.Unity;
 
 namespace Controllers
 {
-    public class SimulationController : IStartable, ITickable
+    public class SimulationController : IInitializable, IStartable, ITickable
     {
         private readonly BehaviorSelector _behaviorSelector;
         private readonly FlockSettingsConfig _flockSettingsConfig;
@@ -22,12 +21,13 @@ namespace Controllers
             _flockFactory = flockFactory;
         }
 
-        public void Start()
+        public void Initialize()
         {
             _behavior = _behaviorSelector.CurrentBehavior;
-            
-            Debug.Log($"{nameof(SimulationController)} Behavior: {_behavior.BehaviorType.ToString()}");
-
+        }
+        
+        public void Start()
+        {
             _flockFactory.CreateAgents();
         }
 

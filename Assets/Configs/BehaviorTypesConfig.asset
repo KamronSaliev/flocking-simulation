@@ -20,6 +20,6 @@ MonoBehaviour:
   - _behaviorType: 2
     _behaviorConfig: {fileID: 11400000, guid: dec8308a6344d2246ab4cf7ab24ab34e, type: 2}
   - _behaviorType: 3
-    _behaviorConfig: {fileID: 11400000, guid: 7539c44832d52704d9fa66353658d2bb, type: 2}
+    _behaviorConfig: {fileID: 11400000, guid: 67ecf7e0a481492458f694b0fd76adbe, type: 2}
   - _behaviorType: 4
     _behaviorConfig: {fileID: 11400000, guid: ca68681f7d09d5243a3d6451ec8cf8f5, type: 2}

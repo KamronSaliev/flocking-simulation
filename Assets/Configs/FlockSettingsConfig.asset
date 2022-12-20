@@ -16,8 +16,8 @@ MonoBehaviour:
   - {fileID: 4956842377586539026, guid: f4f4bcbd7865bf84d86dcbef4318b86c, type: 3}
   - {fileID: 4956842377586539026, guid: 2496bafe8c70871459b79f51f2930dce, type: 3}
   - {fileID: 4956842377586539026, guid: c0a0761c14c19a34f88dc908613d67db, type: 3}
-  _agentCount: 180
+  _agentCount: 150
   _flockDensity: 0.1
-  _agentSpeed: 3
+  _agentSpeed: 5
   _neighborRadius: 2.5
   _avoidanceRadiusMultiplier: 0.5

@@ -42,36 +42,26 @@ namespace Controllers
 
         private async UniTask LoadAlignmentSimulationSceneAsync(CancellationToken cancellationToken)
         {
-            Debug.Log($"[{nameof(MenuController)}] LoadAlignment");
-
             await LoadByBehavior(BehaviorType.Alignment);
         }
 
         private async UniTask LoadAttractionSimulationSceneAsync(CancellationToken cancellationToken)
         {
-            Debug.Log($"[{nameof(MenuController)}] LoadAttraction");
-
             await LoadByBehavior(BehaviorType.Attraction);
         }
 
         private async UniTask LoadAvoidanceSimulationSceneAsync(CancellationToken cancellationToken)
         {
-            Debug.Log($"[{nameof(MenuController)}] LoadAvoidance");
-
             await LoadByBehavior(BehaviorType.Avoidance);
         }
 
         private async UniTask LoadCohesionSimulationSceneAsync(CancellationToken cancellationToken)
         {
-            Debug.Log($"[{nameof(MenuController)}] LoadCohesion");
-
             await LoadByBehavior(BehaviorType.Cohesion);
         }
 
         private async UniTask LoadCompositeSimulationSceneAsync(CancellationToken cancellationToken)
         {
-            Debug.Log($"[{nameof(MenuController)}] LoadComposite");
-
             await LoadByBehavior(BehaviorType.Composite);
         }
 

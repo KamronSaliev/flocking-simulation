@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AttractionToPointBehavior
   m_EditorClassIdentifier: 
   _points:
-  - {x: 0, y: -10}
-  - {x: 0, y: 10}
-  - {x: -13, y: 0}
-  - {x: 13, y: 0}
+  - {x: 0, y: -6}
+  - {x: 0, y: 6}
+  - {x: -12, y: 0}
+  - {x: 12, y: 0}
