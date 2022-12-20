@@ -3,7 +3,7 @@ using Configs.Behaviors;
 using Enums;
 using UnityEngine;
 
-namespace Core
+namespace Configs
 {
     [Serializable]
     public class Behavior
