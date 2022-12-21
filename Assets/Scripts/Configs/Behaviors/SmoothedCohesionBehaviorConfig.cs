@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Views;
 
 namespace Configs.Behaviors
@@ -13,10 +12,9 @@ namespace Configs.Behaviors
 
         private Vector2 _currentVelocity;
 
-        public override Vector2 CalculateMove(FlockAgentView currentAgent, List<Transform> context,
-            FlockSettingsConfig flockSettingsConfig)
+        public override Vector2 CalculateMove(FlockAgentView currentAgent, FlockSettingsConfig flockSettingsConfig)
         {
-            _smoothedCohesionVector = base.CalculateMove(currentAgent, context, flockSettingsConfig);
+            _smoothedCohesionVector = base.CalculateMove(currentAgent, flockSettingsConfig);
 
             // gradually changes the vector
             _smoothedCohesionVector = Vector2.SmoothDamp(currentAgent.transform.up, _smoothedCohesionVector,

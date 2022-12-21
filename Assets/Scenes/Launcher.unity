@@ -213,7 +213,7 @@ MonoBehaviour:
     TypeName: 
   autoRun: 1
   autoInjectGameObjects: []
-  _behaviorTypeSelector: {fileID: 0}
+  _servicesScene: Launcher
 --- !u!4 &1500076236
 Transform:
   m_ObjectHideFlags: 0

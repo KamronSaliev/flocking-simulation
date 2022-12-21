@@ -9,6 +9,7 @@ namespace Configs
 
         public int SimulationSceneIndex => _simulationSceneIndex;
 
+        // TODO: Use scene serialization, update drawer logic
         [SerializeField] private int _menuSceneIndex = 1;
 
         [SerializeField] private int _simulationSceneIndex = 2;

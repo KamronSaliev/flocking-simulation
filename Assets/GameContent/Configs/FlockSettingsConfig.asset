@@ -18,6 +18,6 @@ MonoBehaviour:
   - {fileID: 4956842377586539026, guid: c0a0761c14c19a34f88dc908613d67db, type: 3}
   _agentCount: 150
   _flockDensity: 0.1
-  _agentSpeed: 5
+  _agentSpeed: 3
   _neighborRadius: 2.5
   _avoidanceRadiusMultiplier: 0.5

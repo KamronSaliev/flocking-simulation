@@ -39,7 +39,7 @@ namespace Views
 
         public void UpdateName(int type, int index)
         {
-            gameObject.name = Constants.FlockAgentPrefix + Constants.FlockName + type + "_" + index;
+            gameObject.name = $"{Constants.FlockAgentPrefix}_{Constants.FlockName}{type}_{index}";
         }
 
         private void RotateTowardsDirection(Vector2 direction)

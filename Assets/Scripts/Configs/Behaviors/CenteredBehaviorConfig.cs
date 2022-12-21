@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Views;
 
 namespace Configs.Behaviors
@@ -14,8 +13,7 @@ namespace Configs.Behaviors
 
         [SerializeField] private Vector2 _center = Vector2.zero;
 
-        public override Vector2 CalculateMove(FlockAgentView currentAgent, List<Transform> context,
-            FlockSettingsConfig flockSettingsConfig)
+        public override Vector2 CalculateMove(FlockAgentView currentAgent, FlockSettingsConfig flockSettingsConfig)
         {
             var centerTowardsVector = _center - (Vector2)currentAgent.transform.position;
             return centerTowardsVector.magnitude > _radius ? centerTowardsVector : Vector2.zero;

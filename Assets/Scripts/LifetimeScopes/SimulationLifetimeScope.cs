@@ -1,6 +1,7 @@
 using Configs;
 using Controllers;
 using Factories;
+using UI;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
@@ -13,6 +14,8 @@ namespace LifetimeScopes
 
         [SerializeField] private Transform _flockRoot;
 
+        [SerializeField] private BackButtonView _backButtonView;
+
         protected override void Configure(IContainerBuilder builder)
         {
             builder.RegisterInstance(_flockSettingsConfig);
@@ -21,6 +24,15 @@ namespace LifetimeScopes
             builder.Register<FlockFactory>(Lifetime.Singleton).AsImplementedInterfaces().AsSelf();
 
             builder.RegisterEntryPoint<SimulationController>();
+            
+            RegisterUI(builder);
+        }
+
+        private void RegisterUI(IContainerBuilder builder)
+        {
+            builder.RegisterComponent(_backButtonView);
+            
+            builder.RegisterEntryPoint<BackButtonController>();
         }
     }
 }
