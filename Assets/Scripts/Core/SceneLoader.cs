@@ -11,8 +11,6 @@ namespace Core
         public event Action SceneLoaded = delegate { };
         public event Action SceneStartLoading = delegate { };
 
-        public int ActiveSceneIndex { get; private set; }
-
         private readonly ScenesConfig _scenesConfig;
 
         public SceneLoader(ScenesConfig scenesConfig)
@@ -30,15 +28,9 @@ namespace Core
             await LoadSceneAsync(_scenesConfig.SimulationSceneIndex);
         }
 
-        public async UniTask LoadLastSceneAsync()
-        {
-            await LoadSceneAsync(ActiveSceneIndex);
-        }
-
         private async UniTask LoadSceneAsync(int index)
         {
             await SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
-            
 
             var sceneLoadingOperation = SceneManager.LoadSceneAsync(index, LoadSceneMode.Additive);
 
@@ -49,7 +41,6 @@ namespace Core
             var scene = SceneManager.GetSceneByBuildIndex(index);
 
             SceneManager.SetActiveScene(scene);
-            ActiveSceneIndex = index;
 
             SceneLoaded.Invoke();
 
