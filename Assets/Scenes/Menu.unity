@@ -1063,6 +1063,7 @@ GameObject:
   - component: {fileID: 1657488289}
   - component: {fileID: 1657488288}
   - component: {fileID: 1657488287}
+  - component: {fileID: 1657488292}
   - component: {fileID: 1657488291}
   m_Layer: 5
   m_Name: MenuViewCanvas
@@ -1120,7 +1121,7 @@ Canvas:
   m_GameObject: {fileID: 1657488286}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -1173,6 +1174,19 @@ MonoBehaviour:
   _attractionBehaviorButton: {fileID: 951104602}
   _cohesionBehaviorButton: {fileID: 1578139280}
   _compositeBehaviorButton: {fileID: 2079947011}
+--- !u!114 &1657488292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657488286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 375667bf3e7042eb90ea3add0f245018, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _canvas: {fileID: 1657488289}
 --- !u!1 &2079947009
 GameObject:
   m_ObjectHideFlags: 0

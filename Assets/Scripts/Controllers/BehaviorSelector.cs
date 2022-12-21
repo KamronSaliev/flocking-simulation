@@ -1,6 +1,6 @@
 using Configs;
-using Core;
 using Enums;
+using UnityEngine;
 
 namespace Controllers
 {
@@ -18,6 +18,8 @@ namespace Controllers
         public void Select(BehaviorType behaviorType)
         {
             CurrentBehavior = _behaviorTypesConfig.GetBehaviorByType(behaviorType);
+            
+            Debug.Log($"[{nameof(BehaviorSelector)}] {CurrentBehavior.BehaviorType.ToString()} {CurrentBehavior.BehaviorConfig.name}");
         }
     }
 }

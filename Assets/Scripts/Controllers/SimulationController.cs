@@ -1,5 +1,4 @@
 using Configs;
-using Core;
 using Factories;
 using VContainer.Unity;
 
@@ -35,9 +34,7 @@ namespace Controllers
         {
             foreach (var agent in _flockFactory.Agents)
             {
-                var agentVelocity =
-                    _behavior.BehaviorConfig.CalculateMove(agent, agent.GetNeighborObjects(), 
-                        _flockSettingsConfig);
+                var agentVelocity = _behavior.BehaviorConfig.CalculateMove(agent, _flockSettingsConfig);
                 
                 agentVelocity = agentVelocity.normalized * _flockSettingsConfig.AgentSpeed;
 

@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Views;
 
 namespace Configs.Behaviors
@@ -17,9 +16,10 @@ namespace Configs.Behaviors
         /// </summary>
         private int _avoidObjectsCount;
 
-        public override Vector2 CalculateMove(FlockAgentView currentAgent, List<Transform> context,
-            FlockSettingsConfig flockSettingsConfig)
+        public override Vector2 CalculateMove(FlockAgentView currentAgent, FlockSettingsConfig flockSettingsConfig)
         {
+            var context = currentAgent.GetNeighborObjects();
+            
             _avoidanceVector = Vector2.zero;
             _avoidObjectsCount = 0;
 

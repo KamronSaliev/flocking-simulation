@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Views;
 
 namespace Configs.Behaviors
@@ -12,8 +11,7 @@ namespace Configs.Behaviors
         /// </summary>
         [SerializeField] private Vector2[] _points;
 
-        public override Vector2 CalculateMove(FlockAgentView currentAgent, List<Transform> context,
-            FlockSettingsConfig flockSettingsConfig)
+        public override Vector2 CalculateMove(FlockAgentView currentAgent, FlockSettingsConfig flockSettingsConfig)
         {
             if (_points.Length == 0)
             {

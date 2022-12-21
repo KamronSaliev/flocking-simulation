@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Views;
 
 namespace Configs.Behaviors
@@ -9,9 +8,10 @@ namespace Configs.Behaviors
     {
         private Vector2 _cohesionVector;
 
-        public override Vector2 CalculateMove(FlockAgentView currentAgent, List<Transform> context,
-            FlockSettingsConfig flockSettingsConfig)
+        public override Vector2 CalculateMove(FlockAgentView currentAgent, FlockSettingsConfig flockSettingsConfig)
         {
+            var context = currentAgent.GetNeighborObjects();
+            
             _cohesionVector = Vector2.zero;
 
             if (context.Count == 0)

@@ -3,7 +3,6 @@ using Core;
 using Cysharp.Threading.Tasks;
 using Enums;
 using Extensions;
-using UnityEngine;
 using VContainer.Unity;
 using Views;
 
@@ -13,13 +12,13 @@ namespace Controllers
     {
         private readonly MenuView _menuView;
         private readonly SceneLoader _sceneLoader;
-        private readonly BehaviorSelector behaviorSelector;
+        private readonly BehaviorSelector _behaviorSelector;
 
         public MenuController(MenuView menuView, SceneLoader sceneLoader, BehaviorSelector behaviorSelector)
         {
             _menuView = menuView;
             _sceneLoader = sceneLoader;
-            this.behaviorSelector = behaviorSelector;
+            _behaviorSelector = behaviorSelector;
         }
 
         public void Initialize()
@@ -67,7 +66,7 @@ namespace Controllers
 
         private async UniTask LoadByBehavior(BehaviorType behaviorType)
         {
-            behaviorSelector.Select(behaviorType);
+            _behaviorSelector.Select(behaviorType);
 
             await _sceneLoader.LoadSimulationSceneAsync();
         }

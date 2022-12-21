@@ -38,6 +38,7 @@ namespace Core
         private async UniTask LoadSceneAsync(int index)
         {
             await SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
+            
 
             var sceneLoadingOperation = SceneManager.LoadSceneAsync(index, LoadSceneMode.Additive);
 

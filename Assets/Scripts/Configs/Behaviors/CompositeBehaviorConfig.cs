@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Views;
 
 namespace Configs.Behaviors
@@ -22,9 +21,10 @@ namespace Configs.Behaviors
         /// </summary>
         private float _weightsSum;
 
-        public override Vector2 CalculateMove(FlockAgentView currentAgent, List<Transform> context,
-            FlockSettingsConfig flockSettingsConfig)
+        public override Vector2 CalculateMove(FlockAgentView currentAgent, FlockSettingsConfig flockSettingsConfig)
         {
+            var context = currentAgent.GetNeighborObjects();
+            
             _compositeVelocityVector = Vector2.zero;
             _weightsSum = 0;
 
@@ -41,10 +41,11 @@ namespace Configs.Behaviors
             for (var i = 0; i < _behaviors.Length; i++)
             {
                 var movementVector = _behaviors[i].BehaviorConfig
-                    .CalculateMove(currentAgent, context, flockSettingsConfig);
+                    .CalculateMove(currentAgent, flockSettingsConfig);
 
                 // every behavior vector is multiplied by the ratio of its weight to the sum all weights
                 movementVector *= _behaviors[i].Weight / _weightsSum;
+                
                 _compositeVelocityVector += movementVector;
             }
 
