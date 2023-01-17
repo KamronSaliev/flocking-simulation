@@ -651,6 +651,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -737,6 +738,18 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -926,20 +939,32 @@ TextureImporter:
       tessellationDetail: 0
       bones:
       - name: bone_1
+        guid: 
         position: {x: 31.082947, y: 61.19214, z: 0}
         rotation: {x: 0, y: 0, z: -0.2918419, w: 0.9564666}
         length: 44.907524
         parentId: -1
+        color:
+          serializedVersion: 2
+          rgba: 0
       - name: bone_2
+        guid: 
         position: {x: 44.907524, y: 0.000009931948, z: 0}
         rotation: {x: 0, y: 0, z: 0.27680865, w: 0.9609251}
         length: 88.83571
         parentId: 0
+        color:
+          serializedVersion: 2
+          rgba: 0
       - name: bone_3
+        guid: 
         position: {x: 88.83571, y: -0.000009667279, z: 0}
         rotation: {x: 0, y: 0, z: 0.19962257, w: 0.97987294}
         length: 58.649315
         parentId: 1
+        color:
+          serializedVersion: 2
+          rgba: 0
       spriteID: f5a1a024b10e0d1428b4de44b036f909
       internalID: 21300016
       vertices:
@@ -1671,15 +1696,23 @@ TextureImporter:
       tessellationDetail: 0
       bones:
       - name: bone_1
+        guid: 
         position: {x: 31.23706, y: 6.9454956, z: 0}
         rotation: {x: 0, y: 0, z: 0.98657244, w: 0.16332439}
         length: 20.7248
         parentId: -1
+        color:
+          serializedVersion: 2
+          rgba: 0
       - name: bone_2
+        guid: 
         position: {x: 39.009903, y: 6.9647217, z: 0}
         rotation: {x: 0, y: 0, z: 0.18276295, w: 0.98315704}
         length: 18.949688
         parentId: -1
+        color:
+          serializedVersion: 2
+          rgba: 0
       spriteID: 3c6907a9eae34d141bcdb139892bcf61
       internalID: 21300040
       vertices:
@@ -2149,15 +2182,23 @@ TextureImporter:
       tessellationDetail: 0
       bones:
       - name: bone_1
+        guid: 
         position: {x: 29.306726, y: 87.88275, z: 0}
         rotation: {x: 0, y: 0, z: -0.71944064, w: 0.694554}
         length: 34.689644
         parentId: -1
+        color:
+          serializedVersion: 2
+          rgba: 0
       - name: bone_2
+        guid: 
         position: {x: 34.689644, y: 0.000002968255, z: 0}
         rotation: {x: 0, y: 0, z: 0.27838624, w: 0.96046925}
         length: 36.764244
         parentId: 0
+        color:
+          serializedVersion: 2
+          rgba: 0
       spriteID: 7616b41cf38a24d4a9b21170be97614f
       internalID: 21300048
       vertices:
@@ -3126,15 +3167,23 @@ TextureImporter:
       tessellationDetail: 0
       bones:
       - name: bone_1
+        guid: 
         position: {x: 39.248474, y: 7.188904, z: 0}
         rotation: {x: 0, y: 0, z: 0.87079656, w: 0.49164355}
         length: 24.22611
         parentId: -1
+        color:
+          serializedVersion: 2
+          rgba: 0
       - name: bone_2
+        guid: 
         position: {x: 24.226109, y: -0.0000050676376, z: 0}
         rotation: {x: 0, y: 0, z: 0.088739894, w: 0.9960549}
         length: 18.70762
         parentId: 0
+        color:
+          serializedVersion: 2
+          rgba: 0
       spriteID: 8e3270e2ccdfbfe4085b0c9f9f7c888c
       internalID: 21300100
       vertices:
@@ -4106,20 +4155,32 @@ TextureImporter:
       tessellationDetail: 0
       bones:
       - name: bone_1
+        guid: 
         position: {x: 279.82214, y: 128.32645, z: 0}
         rotation: {x: 0, y: 0, z: -0.98670703, w: 0.16250932}
         length: 90.085434
         parentId: -1
+        color:
+          serializedVersion: 2
+          rgba: 0
       - name: bone_2
+        guid: 
         position: {x: 90.08544, y: -0.0000060596976, z: 0}
         rotation: {x: 0, y: 0, z: -0.01592351, w: 0.9998732}
         length: 101.80736
         parentId: 0
+        color:
+          serializedVersion: 2
+          rgba: 0
       - name: bone_3
+        guid: 
         position: {x: 101.807365, y: -0.000044849723, z: 0}
         rotation: {x: 0, y: 0, z: 0.11145302, w: 0.9937697}
         length: 71.91807
         parentId: 1
+        color:
+          serializedVersion: 2
+          rgba: 0
       spriteID: ca22cd031b3c39448b76256ff741be33
       internalID: 21300170
       vertices:
@@ -4879,25 +4940,41 @@ TextureImporter:
       tessellationDetail: 0
       bones:
       - name: bone_1
+        guid: 
         position: {x: 9.932861, y: 42.69049, z: 0}
         rotation: {x: 0, y: 0, z: 0, w: 1}
         length: 50.49939
         parentId: -1
+        color:
+          serializedVersion: 2
+          rgba: 0
       - name: bone_2
+        guid: 
         position: {x: 50.49939, y: 0.0005493164, z: 0}
         rotation: {x: 0, y: 0, z: -0.0065053287, w: 0.99997884}
         length: 22.742502
         parentId: 0
+        color:
+          serializedVersion: 2
+          rgba: 0
       - name: bone_3
+        guid: 
         position: {x: 22.742502, y: 0.000091800444, z: 0}
         rotation: {x: 0, y: 0, z: 0.013544856, w: 0.99990827}
         length: 20.968586
         parentId: 1
+        color:
+          serializedVersion: 2
+          rgba: 0
       - name: bone_4
+        guid: 
         position: {x: 20.968582, y: 0.000032382, z: 0}
         rotation: {x: 0, y: 0, z: 0.010818561, w: 0.9999415}
         length: 16.548397
         parentId: 2
+        color:
+          serializedVersion: 2
+          rgba: 0
       spriteID: 70a2451a9858aa740969275b4bd63d52
       internalID: 21300196
       vertices:
@@ -5401,25 +5478,41 @@ TextureImporter:
       tessellationDetail: 0
       bones:
       - name: bone_1
+        guid: 
         position: {x: 8.135498, y: 50.680115, z: 0}
         rotation: {x: 0, y: 0, z: 0.011361069, w: 0.99993545}
         length: 46.388386
         parentId: -1
+        color:
+          serializedVersion: 2
+          rgba: 0
       - name: bone_2
+        guid: 
         position: {x: 46.388386, y: -0.0000025435438, z: 0}
         rotation: {x: 0, y: 0, z: -0.008133952, w: 0.9999669}
         length: 54.458282
         parentId: 0
+        color:
+          serializedVersion: 2
+          rgba: 0
       - name: bone_3
+        guid: 
         position: {x: 54.458282, y: 0.000021353286, z: 0}
         rotation: {x: 0, y: 0, z: -0.0032342873, w: 0.99999475}
         length: 37.2417
         parentId: 1
+        color:
+          serializedVersion: 2
+          rgba: 0
       - name: bone_4
+        guid: 
         position: {x: 13.43641, y: -41.193886, z: 0}
         rotation: {x: 0, y: 0, z: -0.0032296772, w: 0.9999948}
         length: 39.70105
         parentId: 1
+        color:
+          serializedVersion: 2
+          rgba: 0
       spriteID: f2b8c33885b65234ba88e72a9684d21f
       internalID: 21300206
       vertices:
@@ -6098,30 +6191,50 @@ TextureImporter:
       tessellationDetail: 0
       bones:
       - name: bone_1
+        guid: 
         position: {x: 14.991821, y: 48.490906, z: 0}
         rotation: {x: 0, y: 0, z: 0.7071078, w: 0.7071058}
         length: 43.69995
         parentId: -1
+        color:
+          serializedVersion: 2
+          rgba: 0
       - name: bone_2
+        guid: 
         position: {x: 79.13208, y: 47.786102, z: 0}
         rotation: {x: 0, y: 0, z: 0.71269554, w: 0.7014736}
         length: 44.410267
         parentId: -1
+        color:
+          serializedVersion: 2
+          rgba: 0
       - name: bone_3
+        guid: 
         position: {x: 135.51904, y: 49.900604, z: 0}
         rotation: {x: 0, y: 0, z: 0.7127857, w: 0.70138186}
         length: 43.705727
         parentId: -1
+        color:
+          serializedVersion: 2
+          rgba: 0
       - name: bone_4
+        guid: 
         position: {x: 44.41027, y: -0.000008740287, z: 0}
         rotation: {x: 0, y: 0, z: -0.71802706, w: 0.6960152}
         length: 28.062231
         parentId: 1
+        color:
+          serializedVersion: 2
+          rgba: 0
       - name: bone_5
+        guid: 
         position: {x: -45.48647, y: 2.3742235, z: 0}
         rotation: {x: 0, y: -0, z: -0.7160598, w: 0.69803894}
         length: 36.78991
         parentId: 1
+        color:
+          serializedVersion: 2
+          rgba: 0
       spriteID: 203dc647b25ce3d4995f347838e0c7f2
       internalID: 21300214
       vertices:
@@ -8111,20 +8224,32 @@ TextureImporter:
       tessellationDetail: 0
       bones:
       - name: bone_1
+        guid: 
         position: {x: 73.31464, y: 14.062134, z: 0}
         rotation: {x: 0, y: 0, z: 0.71641517, w: 0.6976742}
         length: 103.07722
         parentId: -1
+        color:
+          serializedVersion: 2
+          rgba: 0
       - name: bone_2
+        guid: 
         position: {x: 103.077225, y: -0.0000135412565, z: 0}
         rotation: {x: 0, y: 0, z: -0.0049464847, w: 0.9999878}
         length: 65.7648
         parentId: 0
+        color:
+          serializedVersion: 2
+          rgba: 0
       - name: bone_3
+        guid: 
         position: {x: 65.76479, y: 0.0001081242, z: 0}
         rotation: {x: 0, y: 0, z: -0.0032542418, w: 0.99999475}
         length: 54.082966
         parentId: 1
+        color:
+          serializedVersion: 2
+          rgba: 0
       spriteID: 88a883fc521329a48b4efd4af2ed6542
       internalID: 1332156895823156694
       vertices:
@@ -8452,20 +8577,32 @@ TextureImporter:
       tessellationDetail: 0
       bones:
       - name: bone_1
+        guid: 
         position: {x: 67.161255, y: 6.201294, z: 0}
         rotation: {x: 0, y: 0, z: 0.718048, w: 0.6959936}
         length: 75.5635
         parentId: -1
+        color:
+          serializedVersion: 2
+          rgba: 0
       - name: bone_2
+        guid: 
         position: {x: 75.5635, y: 0.00000399494, z: 0}
         rotation: {x: 0, y: 0, z: -0.012164231, w: 0.99992603}
         length: 38.313046
         parentId: 0
+        color:
+          serializedVersion: 2
+          rgba: 0
       - name: bone_3
+        guid: 
         position: {x: 38.31305, y: 0.000026795993, z: 0}
         rotation: {x: 0, y: 0, z: 0.002370393, w: 0.99999726}
         length: 44.23186
         parentId: 1
+        color:
+          serializedVersion: 2
+          rgba: 0
       spriteID: bbce23d70edd346449436d292fe92398
       internalID: 1991527541964092006
       vertices:
@@ -8746,15 +8883,23 @@ TextureImporter:
       tessellationDetail: 0
       bones:
       - name: bone_1
+        guid: 
         position: {x: 55.85034, y: 6.765625, z: 0}
         rotation: {x: 0, y: 0, z: 0.7185064, w: 0.6955204}
         length: 75.34392
         parentId: -1
+        color:
+          serializedVersion: 2
+          rgba: 0
       - name: bone_2
+        guid: 
         position: {x: 75.34392, y: -0.000007922276, z: 0}
         rotation: {x: 0, y: 0, z: -0.00856212, w: 0.99996334}
         length: 59.69933
         parentId: 0
+        color:
+          serializedVersion: 2
+          rgba: 0
       spriteID: 8d790dbc5f1160b469d7b5832992628a
       internalID: -7389093938584699156
       vertices:
@@ -9182,15 +9327,23 @@ TextureImporter:
       tessellationDetail: 0
       bones:
       - name: bone_1
+        guid: 
         position: {x: 10.711853, y: 72.16504, z: 0}
         rotation: {x: 0, y: 0, z: -0.75451434, w: 0.6562836}
         length: 42.516586
         parentId: -1
+        color:
+          serializedVersion: 2
+          rgba: 0
       - name: bone_2
+        guid: 
         position: {x: 42.516594, y: 0.000011262671, z: 0}
         rotation: {x: 0, y: 0, z: 0.20824865, w: 0.978076}
         length: 26.471113
         parentId: 0
+        color:
+          serializedVersion: 2
+          rgba: 0
       spriteID: f42fc1c607c9b5b429e69e104f6bb801
       internalID: 4095445055135255490
       vertices:
@@ -9726,7 +9879,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 60ba86cb1f7986c419f111360b6a7b5a
-      internalID: -7389093938584699156
+      internalID: 7767856883911120478
       vertices: []
       indices: 
       edges: []
@@ -9951,6 +10104,204 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      FlyingObjects_BirdGreen_Tail: 21300356
+      MonsterObjectsSunduk2: 21300008
+      Objects_Arm_Rog: 21300064
+      PenguinIceland_Scarf2: 8350872671911906660
+      FlyingObjects_Bird2_Wing: 21300366
+      MonsterObjectsTooth: 21300022
+      MonsterObjectsHead: 21300000
+      MonsterObjects_Eye2: 21300028
+      OtherObjects_FishGreen_Body: 21300214
+      OtherObjects_FishViolet_Tail: 21300222
+      Objects_Cloud: 21300098
+      PenguinIceland_Leg: -8259580156536454698
+      MonsterObjectsEar: 21300004
+      MonsterObjectsAlmaz1: 21300006
+      Objects_Rect1: 21300070
+      ObjectsStingrayBody: 21300172
+      FlyingObjects_Bird1_Wing: 21300350
+      ObjectsSantaHead: 21300104
+      ObjectsBearHand: 21300048
+      ObjectsBearBrows: 21300040
+      OtherObjects_FishGreen_FinTop: 21300208
+      ObjectsSantaBeard: 21300110
+      Planes_Hellicopter_Angle: 21300260
+      OtherObjects_FishViolet_FinTop: 21300216
+      FlyingObjects_Gull_Head: -312160015636013721
+      ObjectsDeerBody: 21300132
+      OtherObjects_FishPink_FinBtm: 21300200
+      Island_eagle_beak: -3848463219172550816
+      ObjectsStingrayTail: 21300168
+      Planes_Hellicopter_Blade: 21300262
+      Planes_Hellicopter_Body: 21300264
+      Planes_Hellicopter_Btm: 21300266
+      OtherObjects_FishRed_Body: 21300186
+      OtherObjects_FishOrange_Body: 21300198
+      TestObjects_BubbleHighlight: 21300278
+      WaterObjects_Crater1: 21300294
+      ObjectsBearMetal: 21300056
+      FlyingObjects_Gull_Tail: 21300344
+      FlyingObjects_DonutBig_Part: 21300282
+      ObjectPalma1: 21300148
+      ObjectsBearBody: 21300058
+      ObjectsBearLeg: 21300060
+      OtherObjects_FishRed_Tail: 21300184
+      OtherObjects_WaterDragon_Eye: 21300236
+      Island_eagle_tail: -5616894805594653055
+      FlyingObjects_Butterfly_Wing: 21300334
+      ObjectsDeerEar: 21300126
+      Objects_Arm_Shield: 21300066
+      Objects_Part2: 21300164
+      ObjectsSantaRect: 21300102
+      ObjectsLighthouseRoof2: 21300244
+      OtherObjects_FishOrange_Nose: 21300196
+      ObjectsDeerNose: 21300128
+      ObjectsDeerNeck: 21300136
+      ObjectsSantaSled3: 21300124
+      OtherObjects_FishOrange_FinMid: 21300194
+      PenguinIceland_Penguin2: 1991527541964092006
+      WaterObjects_Crater2: 21300296
+      Planes_Hellicopter_Back: 21300258
+      FlyingObjects_Gull_Body: 21300338
+      FlyingObjects_Hamster_Eye_Wh: 21300284
+      ObjectsSantaMouth: 21300106
+      ObjectPalma2: 21300150
+      ObjectsLighthouseDoor: 21300240
+      ObjectsBearGlove: 21300050
+      ObjectsHedgehog_fishBody: 21300178
+      TestObjects_5: 2884642407119169339
+      Island_eagle_squar: -7213869949063923522
+      ObjectsSantaSled2: 21300122
+      Objects_Rect_C: 21300080
+      TestObjects_BubbleCircle: 21300276
+      OtherObjects_Fish_Smile: 21300226
+      ObjectsSantaHair: 21300152
+      Objects_Round: 21300076
+      PenguinIceland_Mouth: 4659501392860118601
+      ObjectsStingrayFlippers: 21300170
+      FlyingObjects_Bird_Leg: 21300342
+      Objects_Round05: 21300250
+      FlyingObjects_Bird1_Head: 21300384
+      PenguinIceland_Scarf3: -6236349072459231114
+      Island_eagle_head: -2228259465838807460
+      ObjectsBearGlove3: 21300096
+      ObjectsCloud: 21300254
+      ObjectsStingrayMouth: 21300166
+      MonsterObjectsAlmaz2: 21300012
+      FlyingObjects_Hamster_1_Eye_Black_2_Nose: 21300288
+      OtherObjects_FishRed_Fin: 21300182
+      ObjectsBearGlove2: 21300078
+      Objects_Rect2: 21300072
+      TestObjects_6: -1625523385838570148
+      ObjectsSantaMustache: 21300108
+      ObjectsBearNose: 21300046
+      Planes_Rect: 21300272
+      FlyingObjects_Butterfly_Mustache: 21300336
+      ObjectsBearSpark: 21300044
+      ObjectsHedgehog_fishMouth1: 21300180
+      Objects_Arm: 21300068
+      ObjectsStingrayMouth1: 21300176
+      ObjectsDeerLeg: 21300138
+      PenguinIceland_Ring: -4365503460726179655
+      ObjectsBaerStan: 21300054
+      ObjectsSantaSled: 21300120
+      ObjectsBearFall1: 21300088
+      Objects_Part1: 21300156
+      FlyingObjects_Bird1_Tail: 21300352
+      Planes_CircleSml: 21300274
+      OtherObjects_Fish_Fin: 21300220
+      FlyingObjects_Gull_Beak: 21300346
+      ObjectsSantaBody: 21300116
+      Objects_Fire: 21300086
+      Objects_Candy: 21300142
+      FlyingObjects_BirdGreen_Body: 21300362
+      PenguinIceland_IceCr-2: -7772118054180877653
+      OtherObjects_FishBlue_Body1: 21300230
+      MonsterObjectsBody: 21300002
+      ObjectsHedgehog_fishTail: 21300174
+      TestObjects_Mask1: -4248215011393840225
+      ObjectsLighthouseWindow: 21300238
+      Planes_CircleBig: 21300268
+      PenguinIceland_Scarf1: 423998551568047495
+      MonsterObjectsEye1: 21300018
+      OtherObjects_FishOrange_Tail: 21300192
+      FlyingObjects_Bird2_Beak: 21300368
+      Objects_Arm_Cap: 21300062
+      OtherObjects_FishOrange_FinTop: 21300190
+      FlyingObjects_BirdGreen_Wing: 21300360
+      OtherObjects_FishGreen_FinBtm: 21300212
+      MonsterObjectsLeg: 21300026
+      FlyingObjects_BirdGreen_Beak: 21300358
+      PenguinIceland_IceCr-1: 6707499411201182394
+      TestObjects_Mask2: 5952938148804092417
+      FlyingObjects_Bird1_Beak1: 21300392
+      ObjectsBearHead: 21300036
+      OtherObjects_FishBlue_Body2: 21300228
+      MonsterObjectsHand: 21300016
+      Objects_Part3: 21300160
+      TestObjects_HamsterWater_Mask: 21300252
+      ObjectsSantaCollar: 21300146
+      OtherObjects_HappyEye: 21300234
+      Objects_Bow: 21300140
+      ObjectsSantaMouth1: 21300158
+      PenguinIceland_Cap1: 483702450888143402
+      ObjectsDeerHorns: 21300130
+      OtherObjects_FishGreen_Tail: 21300210
+      PenguinIceland_Penguin1: 1332156895823156694
+      ObjectsSantaSled1: 21300118
+      TestObjects_2: 21300162
+      ObjectsSantaCap: 21300100
+      ObjectsSantaGlove: 21300112
+      Objects_drova: 21300082
+      PenguinIceland_Hair: 5554410241800363132
+      ObjectsFlyBody: 21300292
+      OtherObjects_FishPink_Tail: 21300202
+      MonsterObjectsSunduk1: 21300030
+      MonsterObjectsMouth1: 21300034
+      OtherObjects_FishPink_FinTop: 21300204
+      PenguinIceland_Flipper: 4095445055135255490
+      ObjectsSantaBeard1: 21300144
+      PenguinIceland_Cap2: 6559976122043969048
+      FlyingObjects_Hamster_Maraca: 21300232
+      MonsterObjectsCap: 21300024
+      2x2: 21300074
+      ObjectsBearTor: 21300052
+      Island_eagle_wing: 7767856883911120478
+      FlyingObjects_Bird2_Head: 21300388
+      Island_eagle_eye: -2589891583996492799
+      ObjectsLighthouseRoof: 21300242
+      MonsterObjectsSunduk3: 21300032
+      ObjectsBearFall: 21300094
+      FlyingObjects_Gull_Only_Body: 8848059802498263098
+      OtherObjects_FishPink_Body: 21300206
+      MonsterObjectsEye: 21300010
+      OtherObjects_FishViolet_Body: 21300224
+      FlyingObjects_Gull_Wing: 21300340
+      PenguinIceland_CircleMiddle: -3729521486174712214
+      PenguinIceland_EyeCl: 3376624541196727692
+      Island_eagle_beak_down: -4602365191064852385
+      FlyingObjects_Bird1_Body: 21300348
+      FlyingObjects_Bird1_Beak2: 21300280
+      ObjectsBearEar: 21300038
+      Planes_AmericaPlane_Tail: 21300270
+      FlyingObjects_Bird2_Body: 21300386
+      ObjectsBearNose2: 21300092
+      "PenguinIceland_\u0421ontainer2": 7974772829230154175
+      Island_eagle_body: -8423460162728540954
+      MonsterObjectsMouth: 21300020
+      MonsterObjectsSunduk: 21300014
+      ObjectsLighthouseTower: 21300246
+      ObjectsSantaHand: 21300114
+      OtherObjects_FishViolet_FinBtm: 21300218
+      PenguinIceland_Eye: 7679443075164507605
+      ObjectsBearEye: 21300042
+      ObjectsFlyWing: 21300290
+      PenguinIceland_Penguin3: -7389093938584699156
+      Planes_ChickenPlane_Universal: 21300256
+      OtherObjects_FishOrange_FinBtm: 21300188
+      "PenguinIceland_\u0421ontainer1": -7652151209937961699
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
