@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
-namespace Attributes
+namespace FlockingSimulation.Attributes
 {
     public class SerializableScene : PropertyAttribute
     {

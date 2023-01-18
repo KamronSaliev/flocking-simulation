@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Core
+namespace FlockingSimulation.Core
 {
     public class CameraHolder
     {

@@ -1,7 +1,7 @@
-using Configs;
-using Enums;
+using FlockingSimulation.Configs;
+using FlockingSimulation.Enums;
 
-namespace Controllers
+namespace FlockingSimulation.Controllers
 {
     public class BehaviorSelector
     {

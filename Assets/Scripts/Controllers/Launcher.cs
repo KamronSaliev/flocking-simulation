@@ -1,10 +1,10 @@
 using System.Threading;
-using Core;
 using Cysharp.Threading.Tasks;
+using FlockingSimulation.Core;
 using UnityEngine.SceneManagement;
 using VContainer.Unity;
 
-namespace Controllers
+namespace FlockingSimulation.Controllers
 {
     public class Launcher : IAsyncStartable
     {

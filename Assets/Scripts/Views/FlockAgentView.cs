@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using Configs;
-using Core;
+using FlockingSimulation.Configs;
+using FlockingSimulation.Core;
 using UnityEngine;
 using VContainer;
 
-namespace Views
+namespace FlockingSimulation.Views
 {
     [RequireComponent(typeof(Collider2D))]
     public class FlockAgentView : MonoBehaviour

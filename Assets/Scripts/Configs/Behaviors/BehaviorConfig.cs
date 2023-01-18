@@ -1,7 +1,7 @@
-﻿using UnityEngine;
-using Views;
+﻿using FlockingSimulation.Views;
+using UnityEngine;
 
-namespace Configs.Behaviors
+namespace FlockingSimulation.Configs.Behaviors
 {
     public abstract class BehaviorConfig : ScriptableObject
     {

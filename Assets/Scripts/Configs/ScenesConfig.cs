@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Configs
+namespace FlockingSimulation.Configs
 {
     [CreateAssetMenu(menuName = "Simulation/ScenesConfig")]
     public class ScenesConfig : ScriptableObject

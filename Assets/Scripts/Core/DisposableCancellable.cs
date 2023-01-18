@@ -1,6 +1,6 @@
 using System.Threading;
 
-namespace Core
+namespace FlockingSimulation.Core
 {
     public abstract class DisposableCancellable : Disposable
     {

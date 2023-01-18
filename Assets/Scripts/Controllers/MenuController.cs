@@ -1,12 +1,12 @@
 using System.Threading;
-using Core;
 using Cysharp.Threading.Tasks;
-using Enums;
-using Extensions;
+using FlockingSimulation.Core;
+using FlockingSimulation.Enums;
+using FlockingSimulation.Extensions;
+using FlockingSimulation.Views;
 using VContainer.Unity;
-using Views;
 
-namespace Controllers
+namespace FlockingSimulation.Controllers
 {
     public class MenuController : DisposableCancellable, IInitializable
     {

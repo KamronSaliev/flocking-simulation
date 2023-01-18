@@ -1,7 +1,7 @@
-using Extensions;
+using FlockingSimulation.Extensions;
 using UnityEngine;
 
-namespace UI
+namespace FlockingSimulation.UI
 {
     public class SafeAreaResizer : MonoBehaviour
     {

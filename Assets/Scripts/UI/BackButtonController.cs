@@ -1,10 +1,10 @@
 using System.Threading;
-using Core;
 using Cysharp.Threading.Tasks;
-using Extensions;
+using FlockingSimulation.Core;
+using FlockingSimulation.Extensions;
 using VContainer.Unity;
 
-namespace UI
+namespace FlockingSimulation.UI
 {
     public class BackButtonController : DisposableCancellable, IInitializable
     {

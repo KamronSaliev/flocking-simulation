@@ -1,7 +1,7 @@
+using FlockingSimulation.Views;
 using UnityEngine;
-using Views;
 
-namespace Configs
+namespace FlockingSimulation.Configs
 {
     [CreateAssetMenu(menuName = "Simulation/FlockSettingsConfig")]
     public class FlockSettingsConfig : ScriptableObject

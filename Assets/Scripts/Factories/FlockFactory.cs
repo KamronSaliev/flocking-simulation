@@ -1,14 +1,14 @@
 using System;
 using System.Collections.Generic;
-using Configs;
+using FlockingSimulation.Configs;
+using FlockingSimulation.Views;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
-using Views;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
 
-namespace Factories
+namespace FlockingSimulation.Factories
 {
     public class FlockFactory : IDisposable
     {

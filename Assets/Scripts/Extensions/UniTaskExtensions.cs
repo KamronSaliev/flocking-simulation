@@ -1,11 +1,10 @@
 using System;
 using System.Threading;
-using Core;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.Linq;
-using Views;
+using FlockingSimulation.Views;
 
-namespace Extensions
+namespace FlockingSimulation.Extensions
 {
     public static class UniTaskExtensions
     {

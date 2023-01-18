@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
+using FlockingSimulation.Views;
 using UnityEngine;
-using Views;
 
-namespace Configs.Filters
+namespace FlockingSimulation.Configs.Filters
 {
     public abstract class ContextFilter : ScriptableObject
     {

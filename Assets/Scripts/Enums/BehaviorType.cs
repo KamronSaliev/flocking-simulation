@@ -1,4 +1,4 @@
-namespace Enums
+namespace FlockingSimulation.Enums
 {
     public enum BehaviorType
     {

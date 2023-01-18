@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-namespace Views
+namespace FlockingSimulation.Views
 {
     [RequireComponent(typeof(Collider2D))]
     public class ButtonView : MonoBehaviour, IPointerClickHandler, IPointerDownHandler, IPointerUpHandler

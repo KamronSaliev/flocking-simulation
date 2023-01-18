@@ -1,8 +1,8 @@
-using Configs;
-using Factories;
+using FlockingSimulation.Configs;
+using FlockingSimulation.Factories;
 using VContainer.Unity;
 
-namespace Controllers
+namespace FlockingSimulation.Controllers
 {
     public class SimulationController : IInitializable, IStartable, ITickable
     {

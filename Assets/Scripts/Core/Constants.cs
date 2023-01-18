@@ -1,4 +1,4 @@
-﻿namespace Core
+﻿namespace FlockingSimulation.Core
 {
     public static class Constants
     {
