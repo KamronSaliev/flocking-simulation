@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using FlockingSimulation.Views;
 using UnityEngine;
+using Views;
 
-namespace FlockingSimulation.Configs.Filters
+namespace Configs.Filters
 {
     [CreateAssetMenu(menuName = "Simulation/Filters/FlockFilter")]
     public class FlockFilter : ContextFilter

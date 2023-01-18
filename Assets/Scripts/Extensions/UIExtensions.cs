@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace FlockingSimulation.Extensions
+namespace Extensions
 {
     public static class UIExtensions
     {

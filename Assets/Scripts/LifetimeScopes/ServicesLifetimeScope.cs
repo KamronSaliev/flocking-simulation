@@ -1,11 +1,11 @@
-using FlockingSimulation.Configs;
-using FlockingSimulation.Controllers;
-using FlockingSimulation.Core;
+using Configs;
+using Controllers;
+using Core;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
-namespace FlockingSimulation.LifetimeScopes
+namespace LifetimeScopes
 {
     public class ServicesLifetimeScope : LifetimeScope
     {

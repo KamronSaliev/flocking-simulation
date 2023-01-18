@@ -1,7 +1,7 @@
-﻿using FlockingSimulation.Configs.Filters;
+﻿using Configs.Filters;
 using UnityEngine;
 
-namespace FlockingSimulation.Configs.Behaviors
+namespace Configs.Behaviors
 {
     public abstract class FilteredBehaviorConfig : BehaviorConfig
     {

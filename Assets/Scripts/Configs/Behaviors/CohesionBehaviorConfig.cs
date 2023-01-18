@@ -1,7 +1,7 @@
-﻿using FlockingSimulation.Views;
-using UnityEngine;
+﻿using UnityEngine;
+using Views;
 
-namespace FlockingSimulation.Configs.Behaviors
+namespace Configs.Behaviors
 {
     [CreateAssetMenu(menuName = "Simulation/Behaviors/CohesionBehaviorConfig")]
     public class CohesionBehaviorConfig : FilteredBehaviorConfig

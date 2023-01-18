@@ -1,8 +1,9 @@
 using System.Linq;
-using FlockingSimulation.Enums;
+using Core;
+using Enums;
 using UnityEngine;
 
-namespace FlockingSimulation.Configs
+namespace Configs
 {
     [CreateAssetMenu(menuName = "Simulation/BehaviorTypesConfig")]
     public class BehaviorTypesConfig : ScriptableObject

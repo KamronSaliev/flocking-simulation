@@ -1,9 +1,9 @@
 ﻿using System;
-using FlockingSimulation.Configs.Behaviors;
-using FlockingSimulation.Enums;
+using Configs.Behaviors;
+using Enums;
 using UnityEngine;
 
-namespace FlockingSimulation.Configs
+namespace Configs
 {
     [Serializable]
     public class Behavior

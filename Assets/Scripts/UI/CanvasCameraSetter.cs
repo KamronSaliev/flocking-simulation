@@ -1,8 +1,8 @@
-using FlockingSimulation.Core;
+using Core;
 using UnityEngine;
 using VContainer;
 
-namespace FlockingSimulation.UI
+namespace UI
 {
     public class CanvasCameraSetter : MonoBehaviour
     {

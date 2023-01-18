@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace FlockingSimulation.Views
+namespace Views
 {
     public class MenuView : MonoBehaviour
     {

@@ -1,12 +1,12 @@
-using FlockingSimulation.Configs;
-using FlockingSimulation.Controllers;
-using FlockingSimulation.Factories;
-using FlockingSimulation.UI;
+using Configs;
+using Controllers;
+using Factories;
+using UI;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
-namespace FlockingSimulation.LifetimeScopes
+namespace LifetimeScopes
 {
     public class SimulationLifetimeScope : LifetimeScope
     {

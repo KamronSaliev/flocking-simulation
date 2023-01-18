@@ -1,8 +1,8 @@
-using FlockingSimulation.Controllers;
+using Controllers;
 using VContainer;
 using VContainer.Unity;
 
-namespace FlockingSimulation.LifetimeScopes
+namespace LifetimeScopes
 {
     public class LauncherLifetimeScope : LifetimeScope
     {

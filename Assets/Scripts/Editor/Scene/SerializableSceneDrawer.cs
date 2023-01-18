@@ -1,5 +1,6 @@
 using System;
-using FlockingSimulation.Attributes;
+using Attributes;
+using Configs;
 using UnityEditor;
 using UnityEngine;
 

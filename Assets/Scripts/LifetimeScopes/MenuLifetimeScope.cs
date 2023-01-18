@@ -1,10 +1,10 @@
-using FlockingSimulation.Controllers;
-using FlockingSimulation.Views;
+using Controllers;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
+using Views;
 
-namespace FlockingSimulation.LifetimeScopes
+namespace LifetimeScopes
 {
     public class MenuLifetimeScope : LifetimeScope
     {

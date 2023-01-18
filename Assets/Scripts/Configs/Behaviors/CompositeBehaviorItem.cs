@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace FlockingSimulation.Configs.Behaviors
+namespace Configs.Behaviors
 {
     [Serializable]
     public class CompositeBehaviorItem

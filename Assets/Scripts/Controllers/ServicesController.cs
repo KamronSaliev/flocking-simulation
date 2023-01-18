@@ -1,9 +1,9 @@
 using System.Threading;
+using Core;
 using Cysharp.Threading.Tasks;
-using FlockingSimulation.Core;
 using VContainer.Unity;
 
-namespace FlockingSimulation.Controllers
+namespace Controllers
 {
     public class ServicesController : IAsyncStartable
     {

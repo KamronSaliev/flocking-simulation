@@ -1,10 +1,10 @@
 ﻿using System;
+using Configs;
 using Cysharp.Threading.Tasks;
-using FlockingSimulation.Configs;
 using UnityEngine.SceneManagement;
 using VContainer.Unity;
 
-namespace FlockingSimulation.Core
+namespace Core
 {
     public class SceneLoader
     {

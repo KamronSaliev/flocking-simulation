@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace FlockingSimulation.UI
+namespace UI
 {
     public class BackButtonView : MonoBehaviour
     {

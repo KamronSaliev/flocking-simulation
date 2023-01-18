@@ -1,6 +1,6 @@
 using System;
 
-namespace FlockingSimulation.Core
+namespace Core
 {
     public abstract class Disposable : IDisposable
     {
