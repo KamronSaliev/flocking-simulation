@@ -5,7 +5,7 @@ namespace Controllers
 {
     public class BehaviorSelector
     {
-        public Behavior CurrentBehavior { get; private set; }
+        public Behavior CurrentBehavior { get; set; }
 
         private readonly BehaviorTypesConfig _behaviorTypesConfig;
 
